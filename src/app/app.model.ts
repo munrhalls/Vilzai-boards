@@ -1,4 +1,4 @@
-export class Tasks {
+export class Task {
   constructor(
     public text: string,
     color: string,
@@ -10,7 +10,7 @@ export class Tasks {
 export class Column {
   constructor(
     public title: string,
-    public tasks: Tasks[],
+    public tasks: Task[],
     public orderNum: number
   ) {}
 }
