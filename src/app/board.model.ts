@@ -16,5 +16,9 @@ export class Column {
 }
 
 export class Board {
-  constructor(public title: string, public columns: Column[]) {}
+  constructor(
+    readonly id: number,
+    public title: string,
+    public columns: Column[]
+  ) {}
 }
