@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Board } from './board.model';
 import { User } from './user.model';
+import { usersData } from './users.data';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,5 @@ import { User } from './user.model';
 })
 export class AppComponent {
   title = 'kanboard';
-  user = {} as User;
-  boards: Board[] = [];
+  activeUser: User = usersData[0];
 }

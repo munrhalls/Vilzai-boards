@@ -1,9 +1,9 @@
 export class Task {
   constructor(
     public text: string,
-    color: string,
-    orderNum: number,
-    alottedTime: null | number
+    public color: string,
+    public orderNum: number,
+    public alottedTime: null | number
   ) {}
 }
 
