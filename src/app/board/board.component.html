@@ -1,11 +1,15 @@
 <div class="container">
-  <header>
-    <h1>{{ board.title }}</h1>
-  </header>
+  <div class="row">
+    <div class="col">
+      <h1>{{ board.title }}</h1>
+    </div>
+    <div class="col"><app-board-header></app-board-header></div>
+  </div>
 </div>
 <div class="row">
   <div class="col" *ngFor="let col of board.columns">
     <header>
+      col header
       {{ col.title }}
     </header>
     <div class="row" *ngFor="let task of col.tasks">

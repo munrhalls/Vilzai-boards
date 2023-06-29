@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { BoardsMenuComponent } from './header/boards-menu/boards-menu.component';
 import { UserMenuComponent } from './header/user-menu/user-menu.component';
 import { BoardComponent } from './board/board.component';
+import { BoardHeaderComponent } from './board/board-header/board-header.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BoardComponent } from './board/board.component';
     HeaderComponent,
     BoardsMenuComponent,
     UserMenuComponent,
-    BoardComponent
+    BoardComponent,
+    BoardHeaderComponent
   ],
   imports: [
     BrowserModule
