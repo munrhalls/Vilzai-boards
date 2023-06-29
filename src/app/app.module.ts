@@ -7,6 +7,8 @@ import { BoardsMenuComponent } from './header/boards-menu/boards-menu.component'
 import { UserMenuComponent } from './header/user-menu/user-menu.component';
 import { BoardComponent } from './board/board.component';
 import { BoardHeaderComponent } from './board/board-header/board-header.component';
+import { BoardMenuComponent } from './board/board-header/board-menu/board-menu.component';
+import { BoardEditComponent } from './board/board-edit/board-edit.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { BoardHeaderComponent } from './board/board-header/board-header.componen
     BoardsMenuComponent,
     UserMenuComponent,
     BoardComponent,
-    BoardHeaderComponent
+    BoardHeaderComponent,
+    BoardMenuComponent,
+    BoardEditComponent
   ],
   imports: [
     BrowserModule
