@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -19,12 +20,10 @@ import { BoardEditComponent } from './board/board-edit/board-edit.component';
     BoardComponent,
     BoardHeaderComponent,
     BoardMenuComponent,
-    BoardEditComponent
+    BoardEditComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

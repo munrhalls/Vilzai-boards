@@ -22,3 +22,7 @@ export class Board {
     public columns: Column[]
   ) {}
 }
+
+export class BoardSelectHook {
+  constructor(readonly id: number, public title: string) {}
+}

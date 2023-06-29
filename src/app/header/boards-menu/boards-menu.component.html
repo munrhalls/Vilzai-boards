@@ -1,1 +1,17 @@
-<p>boards-menu works!</p>
+<div class="dropdown">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Boards menu
+  </button>
+  <ul class="dropdown-menu">
+    <li *ngFor="let boardSelect of boardSelectHooks">
+      <a class="dropdown-item" (click)="handleBoardSelected(boardSelect.id)">{{
+        boardSelect.title
+      }}</a>
+    </li>
+  </ul>
+</div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Board } from './board.model';
 import { User } from './user.model';
+import { BoardSelectHook } from './board.model';
 import { usersData } from './users.data';
 
 @Component({
@@ -10,5 +10,16 @@ import { usersData } from './users.data';
 })
 export class AppComponent {
   title = 'kanboard';
-  activeUser: User = usersData[0];
+  testUser = usersData[0];
+  activeUser: User = this.testUser;
+  boardSelectHooks: BoardSelectHook[] = this.testUser.boards.map((board) => {
+    return {
+      id: board.id,
+      title: board.title,
+    };
+  });
+
+  onBoardSelected(id: number) {
+    console.log(id);
+  }
 }
