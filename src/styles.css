@@ -1,6 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+/* BUTTONS */
+.container-button-dark {
+  background-color: #000;
+}
+.button-dark {
+  cursor: pointer;
+}
+
+/* LOGOS */
 .container-logo {
   border-radius: 3px;
   border-bottom: 1px solid #000;
