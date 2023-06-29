@@ -9,9 +9,11 @@
   </button>
   <ul class="dropdown-menu">
     <li *ngFor="let boardSelect of boardSelectHooks">
-      <a class="dropdown-item" (click)="handleBoardSelected(boardSelect.id)">{{
-        boardSelect.title
-      }}</a>
+      <a
+        class="dropdown-item button-select-board"
+        (click)="handleBoardSelected(boardSelect.id)"
+        >{{ boardSelect.title }}</a
+      >
     </li>
   </ul>
 </div>
