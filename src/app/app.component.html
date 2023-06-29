@@ -1,2 +1,2 @@
 <app-header></app-header>
-<app-board *ngFor="let board of activeUser.boards"></app-board>
+<app-board [board]="activeUser.boards[0]"></app-board>

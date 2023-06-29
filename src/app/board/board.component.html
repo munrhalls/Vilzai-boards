@@ -1,1 +1,17 @@
-<p>board works!</p>
+<div class="container">
+  <header>
+    <h1>{{ board.title }}</h1>
+  </header>
+</div>
+<div class="row">
+  <div class="col" *ngFor="let col of board.columns">
+    <header>
+      {{ col.title }}
+    </header>
+    <div class="row" *ngFor="let task of col.tasks">
+      <div class="col-xs-12">
+        <div [ngStyle]="{ background: task.color }">{{ task.text }}</div>
+      </div>
+    </div>
+  </div>
+</div>
