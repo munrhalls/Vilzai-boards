@@ -67,7 +67,7 @@ export const usersData: User[] = [
           ],
         },
         {
-          title: 'Column One',
+          title: 'Column Two',
           orderNum: 0,
           tasks: [
             {
@@ -133,7 +133,7 @@ export const usersData: User[] = [
       title: 'Board C',
       columns: [
         {
-          title: 'Column One',
+          title: 'Column Three',
           orderNum: 0,
           tasks: [
             {
