@@ -2,11 +2,14 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 /* BUTTONS */
+
 .container-button-dark {
   background-color: #000;
 }
 .button-dark {
   cursor: pointer;
+  --bs-dropdown-link-active-bg: #000;
+  --bs-dropdown-link-active-color: #fff;
 }
 
 /* LOGOS */
