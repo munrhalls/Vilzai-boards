@@ -33,14 +33,24 @@
   height: 2rem;
   font-size: 0.61rem;
 }
-.button-guest {
-  margin-top: -2rem;
+.button-guest-login {
+  margin-top: 1rem;
+  font-size: 0.45rem;
+  width: 5rem;
+}
+.button-guest-signup {
+  margin-top: 1rem;
+  font-size: 0.45rem;
+
+  width: 5rem;
 }
 .button-login {
-  margin-bottom: -1rem;
+  margin-bottom: 1rem;
+  width: 5rem;
 }
 .button-register {
-  margin-bottom: -1rem;
+  margin-bottom: 1rem;
+  width: 5rem;
 }
 i {
   font-size: 1rem;
@@ -54,26 +64,48 @@ i {
   .hourglass-bottom {
     align-items: end;
   }
-  .button-guest {
-    margin-top: -2rem;
-    height: initial;
+  .button-login {
+    margin-bottom: 1rem;
+    width: 7rem;
+  }
+  .button-register {
+    margin-bottom: 1rem;
+    width: 7rem;
+  }
+  .button-guest-login {
+    margin-top: 1rem;
+    font-size: 0.61rem;
+    width: 7rem;
+  }
+  .button-guest-signup {
+    margin-top: 1rem;
+    font-size: 0.61rem;
+    width: 7rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .button-guest {
-    margin-top: -5rem;
-    padding: 0 2rem;
-    height: 8rem;
-    font-size: 1.25rem;
+  .button-guest-login {
+    margin-top: 1rem;
+    height: initial;
+    width: 8.5rem;
+    font-size: 1rem;
+  }
+  .button-guest-signup {
+    margin-top: 1rem;
+    height: initial;
+    width: 8.5rem;
+    font-size: 1rem;
   }
   .button-login {
-    margin-bottom: -1rem;
+    margin-bottom: 1rem;
     height: initial;
+    width: 8.5rem;
     font-size: 1rem;
   }
   .button-register {
-    margin-bottom: -1rem;
+    margin-bottom: 1rem;
     height: initial;
+    width: 8.5rem;
     font-size: 1rem;
   }
   i {
@@ -82,18 +114,43 @@ i {
   }
 }
 @media screen and (min-width: 992px) {
-  .button-guest {
-    height: 10rem;
+  .button-guest-login {
+    margin-top: 1rem;
+    width: 10rem;
+  }
+  .button-guest-signup {
+    margin-top: 1rem;
+    width: 10rem;
   }
   .button-login {
-    margin-top: 0;
+    margin-bottom: 1rem;
     font-size: 1.25rem;
+    width: 10rem;
   }
   .button-register {
-    margin-top: 0;
+    margin-bottom: 1rem;
     font-size: 1.25rem;
+    width: 10rem;
   }
   i {
     font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .button-guest-login {
+    width: 12rem;
+    height: 6rem;
+  }
+  .button-guest-signup {
+    width: 12rem;
+    height: 6rem;
+  }
+  .button-login {
+    width: 12rem;
+    height: 6rem;
+  }
+  .button-register {
+    width: 12rem;
+    height: 6rem;
   }
 }
