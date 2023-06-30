@@ -1,4 +1,8 @@
-# Kanboard
+# Vilzai Boards logo is made by the author (Munrhalls), subject to copyright.
+
+Made logo using a combination of fractal object & MS Paint.
+
+# Vilzai Boards
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
