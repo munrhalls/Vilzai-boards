@@ -28,10 +28,17 @@
   .button-text-dark {
     display: none;
   }
+  .container-dropdown {
+    height: initial;
+    width: initial;
+  }
 }
 /* ICONS */
 .icon-button-dark {
   margin-left: 0.5rem;
+}
+.icon-button-large {
+  font-size: 1.5rem;
 }
 
 /* LOGOS */
