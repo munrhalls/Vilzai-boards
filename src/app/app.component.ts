@@ -25,6 +25,9 @@ export class AppComponent implements OnInit {
       }
     }
   }
+  onLoggedOut() {
+    this.activeUser = null;
+  }
   checkAuth() {
     return null;
   }

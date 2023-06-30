@@ -3,6 +3,7 @@
   [username]="activeUser.username"
   [boardSelectHooks]="boardSelectHooks"
   (boardSelected)="onBoardSelected($event)"
+  (loggedOut)="onLoggedOut()"
 ></app-header>
 <app-welcome
   *ngIf="activeUser === null"

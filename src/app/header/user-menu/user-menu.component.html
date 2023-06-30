@@ -12,13 +12,12 @@
     <li class="dropdown-item-mobile-username">
       <div class="dropdown-item button-active">
         <div>Logged in as:</div>
-
         <i class="bi bi-person-circle"></i>
         <span>{{ username }}</span>
       </div>
     </li>
     <li>
-      <a class="dropdown-item button-active">
+      <a class="dropdown-item button-active" (click)="handleLoggedOut()">
         <i class="bi bi-clipboard-fill"></i>
         <span>LOG OUT</span>
       </a>

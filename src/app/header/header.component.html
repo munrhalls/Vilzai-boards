@@ -12,7 +12,10 @@
       </div>
     </div>
     <div class="col col-xs-3 d-flex justify-content-center">
-      <app-user-menu [username]="username"></app-user-menu>
+      <app-user-menu
+        (loggedOut)="handleLoggedOut()"
+        [username]="username"
+      ></app-user-menu>
     </div>
   </div>
 </div>
