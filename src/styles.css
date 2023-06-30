@@ -16,6 +16,11 @@
   --bs-dropdown-link-active-bg: #000;
   --bs-dropdown-link-active-color: #fff;
 }
+@media screen and (max-width: 576px) {
+  .button-text-dark {
+    display: none;
+  }
+}
 
 /* LOGOS */
 .container-logo {
@@ -30,20 +35,15 @@
   justify-content: center;
   background: #000;
 }
-.text-logo {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.64rem;
-  text-transform: uppercase;
-  border-radius: 3px;
-  color: #fff;
-  margin-top: 0.75rem;
-  margin-right: 0.225rem;
-  text-align: left;
-  width: 100%;
-}
 
 .image-logo {
   border-radius: 3px;
   height: 6rem;
   width: 16rem;
+}
+@media screen and (max-width: 576px) {
+  .image-logo {
+    height: 2.75rem;
+    width: 6rem;
+  }
 }
