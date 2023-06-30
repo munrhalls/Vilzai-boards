@@ -7,5 +7,5 @@ import { Board } from '../board.model';
   styleUrls: ['./board.component.css'],
 })
 export class BoardComponent {
-  @Input() board = {} as Board;
+  @Input() board = {} as Board | null;
 }

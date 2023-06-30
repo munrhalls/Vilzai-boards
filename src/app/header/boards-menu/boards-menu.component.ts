@@ -7,7 +7,7 @@ import { BoardSelectHook } from '../../board.model';
   styleUrls: ['./boards-menu.component.css'],
 })
 export class BoardsMenuComponent {
-  @Input() boardSelectHooks = [] as BoardSelectHook[];
+  @Input() boardSelectHooks = [] as BoardSelectHook[] | null;
   @Output() boardSelected = new EventEmitter<number>();
 
   handleBoardSelected(id: number) {

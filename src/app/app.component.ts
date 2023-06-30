@@ -10,22 +10,19 @@ import { usersData } from './users.data';
 })
 export class AppComponent implements OnInit {
   title = 'VILZAI BOARDS';
-  activeUser: User = usersData[0];
-  selectedBoard: Board = this.activeUser.boards[0];
-  boardSelectHooks: BoardSelectHook[] = this.activeUser.boards.map((board) => {
-    return {
-      id: board.id,
-      title: board.title,
-    };
-  });
+  activeUser: null | User = null;
+  selectedBoard: null | Board = null;
+  boardSelectHooks: null | BoardSelectHook[] = null;
 
   onBoardSelected(id: number) {
     console.log(id);
-    const selectedBoard = this.activeUser.boards.find(
-      (board) => board.id === id
-    );
-    if (selectedBoard) {
-      this.selectedBoard = selectedBoard;
+    if (this.activeUser !== null) {
+      const selectedBoard = this.activeUser.boards.find(
+        (board) => board.id === id
+      );
+      if (selectedBoard !== undefined) {
+        this.selectedBoard = selectedBoard;
+      }
     }
   }
   checkAuth() {
@@ -35,6 +32,13 @@ export class AppComponent implements OnInit {
     this.activeUser = new User(true, Math.random().toString(), []);
     localStorage.setItem('guest-user', JSON.stringify(this.activeUser));
     console.log(localStorage.getItem('guest-user'));
+    this.selectedBoard = this.activeUser.boards[0];
+    this.boardSelectHooks = this.activeUser.boards.map((board) => {
+      return {
+        id: board.id,
+        title: board.title,
+      };
+    });
   }
   ngOnInit(): void {
     const activeUser = this.checkAuth();
