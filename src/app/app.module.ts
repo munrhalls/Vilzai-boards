@@ -10,6 +10,7 @@ import { BoardComponent } from './board/board.component';
 import { BoardHeaderComponent } from './board/board-header/board-header.component';
 import { BoardMenuComponent } from './board/board-header/board-menu/board-menu.component';
 import { BoardEditComponent } from './board/board-edit/board-edit.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BoardEditComponent } from './board/board-edit/board-edit.component';
     BoardHeaderComponent,
     BoardMenuComponent,
     BoardEditComponent,
+    WelcomeComponent,
   ],
   imports: [BrowserModule],
   providers: [],

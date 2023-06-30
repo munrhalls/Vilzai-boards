@@ -1,0 +1,15 @@
+.welcome-container {
+  height: 100%;
+}
+.row {
+  height: 100%;
+  background-image: url("./../../assets/Clepsidre.png");
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+}
+}
+.col {
+  height: 75%;
+}

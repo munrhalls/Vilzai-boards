@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from './user.model';
 import { Board, BoardSelectHook } from './board.model';
 import { usersData } from './users.data';
@@ -8,7 +8,7 @@ import { usersData } from './users.data';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'kanboard';
   testUser = usersData[0];
   activeUser: User = this.testUser;
@@ -19,6 +19,7 @@ export class AppComponent {
       title: board.title,
     };
   });
+  showWelcome: boolean = true;
 
   onBoardSelected(id: number) {
     console.log(id);
@@ -27,4 +28,5 @@ export class AppComponent {
       this.selectedBoard = selectedBoard;
     }
   }
+  ngOnInit(): void {}
 }

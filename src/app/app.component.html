@@ -2,4 +2,6 @@
   [boardSelectHooks]="boardSelectHooks"
   (boardSelected)="onBoardSelected($event)"
 ></app-header>
-<app-board [board]="selectedBoard"></app-board>
+<app-welcome *ngIf="showWelcome === true" style="flex: 1"></app-welcome>
+
+<app-board *ngIf="showWelcome === false" [board]="selectedBoard"></app-board>

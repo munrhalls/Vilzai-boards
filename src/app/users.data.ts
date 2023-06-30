@@ -54,7 +54,7 @@ export const usersData: User[] = [
             },
             {
               text: 'Paint canvas',
-              color: 'darkblue',
+              color: 'd`arkblue',
               orderNum: 0,
               alottedTime: 30,
             },
