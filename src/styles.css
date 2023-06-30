@@ -5,6 +5,7 @@
 
 .container-button-dark {
   background-color: #000;
+  --bs-btn-border-radius: 3px;
 }
 .button-dark {
   cursor: pointer;
