@@ -7,7 +7,12 @@
   border-bottom: 1px solid #000;
 }
 /* BUTTONS */
+.container-dropdown {
+  height: 6rem;
+  width: 6rem;
+}
 .container-button-dark {
+  height: 100%;
   background-color: #000;
   --bs-btn-border-radius: 3px;
 }
@@ -16,10 +21,17 @@
   --bs-dropdown-link-active-bg: #000;
   --bs-dropdown-link-active-color: #fff;
 }
+.button-text-dark {
+  font-weight: bold;
+}
 @media screen and (max-width: 576px) {
   .button-text-dark {
     display: none;
   }
+}
+/* ICONS */
+.icon-button-dark {
+  margin-left: 0.5rem;
 }
 
 /* LOGOS */
