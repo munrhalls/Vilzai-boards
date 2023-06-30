@@ -117,10 +117,12 @@ i {
   .button-guest-login {
     margin-top: 1rem;
     width: 10rem;
+    font-size: 1.25rem;
   }
   .button-guest-signup {
     margin-top: 1rem;
     width: 10rem;
+    font-size: 1.25rem;
   }
   .button-login {
     margin-bottom: 1rem;
