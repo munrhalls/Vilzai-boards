@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user.model';
 import { Board, BoardSelectHook } from './board.model';
-import { guestData } from './users.data';
+import { guestData } from './guest.data';
 
 @Component({
   selector: 'app-root',
@@ -14,37 +14,19 @@ export class AppComponent implements OnInit {
   selectedBoard: null | Board = null;
   boardSelectHooks: null | BoardSelectHook[] = null;
 
-  onBoardSelected(id: number) {
-    console.log(id);
-    if (this.activeUser !== null) {
-      const selectedBoard = this.activeUser.boards.find(
-        (board) => board.id === id
-      );
-      if (selectedBoard !== undefined) {
-        this.selectedBoard = selectedBoard;
-      }
-    }
-  }
-  checkAuth() {
-    return null;
-  }
-  onLoggedOut() {
-    if (this.activeUser === null) return;
-    const boards = this.activeUser.boards;
-    const userData = JSON.stringify({
-      guest: this.activeUser.guest,
-      username: this.activeUser.username,
-      isLoggedIn: false,
-      boards: boards,
-    });
-    localStorage.setItem('guest-user', userData);
-    this.activeUser = null;
-  }
+  ngOnInit(): void {
+    const activeUser = this.checkAuth();
+    if (activeUser !== null) return;
+    const username = localStorage.getItem('LOCAL_STORAGE_LOGGED_IN_USERNAME');
 
-  onGuestRegistered(username: string) {
-    this.activeUser = new User(true, username, true, guestData);
-    localStorage.setItem('guest-user', JSON.stringify(this.activeUser));
-    console.log(localStorage.getItem('guest-user'));
+    if (!username || username === 'null') return;
+    const strGuestLocalStorage = localStorage.getItem(username);
+
+    if (!strGuestLocalStorage) return;
+    const guest = JSON.parse(strGuestLocalStorage);
+    this.activeUser = new User(username, guest);
+
+    console.log(this.activeUser, '////////////sele');
     this.selectedBoard = this.activeUser.boards[0];
     this.boardSelectHooks = this.activeUser.boards.map((board) => {
       return {
@@ -53,17 +35,42 @@ export class AppComponent implements OnInit {
       };
     });
   }
-  ngOnInit(): void {
-    const activeUser = this.checkAuth();
-    if (activeUser === null) {
-      const activeUser = localStorage.getItem('guest-user');
+  checkAuth() {
+    return null;
+  }
+  onBoardSelected(id: number) {
+    if (this.activeUser !== null) {
+      const selectedBoard = this.activeUser.boards.find(
+        (board) => board.id === id
+      );
 
-      if (activeUser) {
-        const guest = JSON.parse(activeUser);
-        if (guest.isLoggedIn === true) {
-          this.activeUser = guest;
-        }
+      if (selectedBoard !== undefined) {
+        this.selectedBoard = selectedBoard;
       }
     }
+  }
+  onGuestRegistered(username: string) {
+    this.activeUser = new User(username, guestData);
+    localStorage.setItem(username, JSON.stringify(this.activeUser.boards));
+    localStorage.setItem('LOCAL_STORAGE_LOGGED_IN_USERNAME', username);
+
+    this.selectedBoard = this.activeUser.boards[0];
+    this.boardSelectHooks = this.activeUser.boards.map((board) => {
+      return {
+        id: board.id,
+        title: board.title,
+      };
+    });
+  }
+  onLoggedOut() {
+    if (this.activeUser === null) return;
+    const boards = this.activeUser.boards;
+    const userData = JSON.stringify({
+      username: this.activeUser.username,
+      boards: boards,
+    });
+    localStorage.setItem(this.activeUser.username, userData);
+    localStorage.setItem('LOCAL_STORAGE_LOGGED_IN_USERNAME', 'null');
+    this.activeUser = null;
   }
 }
