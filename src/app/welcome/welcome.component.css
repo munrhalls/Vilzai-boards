@@ -12,3 +12,11 @@
 .col {
   height: 75%;
 }
+.button-guest {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}

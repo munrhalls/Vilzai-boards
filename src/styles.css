@@ -18,15 +18,18 @@ body {
   height: 6rem;
   width: 6rem;
 }
-.container-button-dark {
+.container-button-active {
   height: 100%;
   background-color: #000;
   --bs-btn-border-radius: 3px;
 }
-.button-dark {
+.button-active {
   cursor: pointer;
   --bs-dropdown-link-active-bg: #000;
   --bs-dropdown-link-active-color: #fff;
+}
+.button-bg-dark {
+  --bs-btn-bg: #000;
 }
 .button-text-dark {
   font-weight: bold;
@@ -41,7 +44,7 @@ body {
   }
 }
 /* ICONS */
-.icon-button-dark {
+.icon-button-active {
   margin-left: 0.5rem;
 }
 .icon-button-large {
