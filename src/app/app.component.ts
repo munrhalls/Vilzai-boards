@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user.model';
 import { Board, BoardSelectHook } from './board.model';
-import { usersData } from './users.data';
+import { guestData } from './users.data';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     return null;
   }
   onGuestRegistered(username: string) {
-    this.activeUser = new User(true, username, []);
+    this.activeUser = new User(true, username, guestData);
     localStorage.setItem('guest-user', JSON.stringify(this.activeUser));
     console.log(localStorage.getItem('guest-user'));
     this.selectedBoard = this.activeUser.boards[0];
