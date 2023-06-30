@@ -28,5 +28,12 @@ export class AppComponent implements OnInit {
       this.selectedBoard = selectedBoard;
     }
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const activeUserStr = localStorage.getItem('activeUser');
+
+    if (activeUserStr) {
+      this.activeUser = JSON.parse(activeUserStr);
+    } else {
+    }
+  }
 }

@@ -18,61 +18,70 @@
 .hourglass-bottom {
   align-items: center;
 }
+.btn {
+  font-weight: bold;
+  height: 2rem;
+  font-size: 0.61rem;
+}
 .button-guest {
   margin-top: -2rem;
-  font-weight: bold;
-  height: 4rem;
 }
-.button-user {
-  margin-bottom: -2rem;
-  font-weight: bold;
-  height: 4rem;
+.button-login {
+  margin-bottom: -1rem;
+}
+.button-register {
+  margin-bottom: -1rem;
 }
 i {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
+  font-size: 1rem;
+  margin-right: 0.25rem;
 }
-@media screen and (max-width: 576px) {
+
+@media screen and (min-width: 576px) {
   .hourglass-top {
-    align-items: start;
+    align-items: center;
   }
   .hourglass-bottom {
     align-items: end;
   }
   .button-guest {
-    margin-top: 2rem;
-    height: initial;
-  }
-  .button-user {
-    margin-bottom: 2rem;
+    margin-top: -2rem;
     height: initial;
   }
 }
 @media screen and (min-width: 768px) {
   .button-guest {
-    margin-top: -2rem;
+    margin-top: -5rem;
     padding: 0 2rem;
     height: 8rem;
+    font-size: 1.25rem;
   }
-  .button-user {
-    margin-bottom: -2rem;
-    padding: 0 2rem;
-    height: 8rem;
+  .button-login {
+    margin-bottom: -1rem;
+    height: initial;
+    font-size: 1rem;
+  }
+  .button-register {
+    margin-bottom: -1rem;
+    height: initial;
+    font-size: 1rem;
   }
   i {
     font-size: 1.75rem;
+    margin-right: 0.5rem;
   }
 }
 @media screen and (min-width: 992px) {
   .button-guest {
-    margin-top: -2rem;
-
     height: 10rem;
   }
-  .button-user {
-    margin-bottom: -2rem;
-
-    height: 10rem;
+  .button-login {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+  .button-register {
+    margin-top: 0;
+    font-size: 1.25rem;
   }
   i {
     font-size: 2.25rem;

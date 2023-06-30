@@ -4,20 +4,28 @@
       <button
         type="button"
         class="button-guest btn btn-dark button-bg-dark button-active d-flex justify-content-center align-items-center"
+        (click)="logInGuest()"
       >
         <i class="bi bi-door-open-fill"></i>
         <span>GUEST</span>
       </button>
     </div>
     <div
-      class="col-12 col-xs-12 d-flex justify-content-center hourglass-bottom"
+      class="col-12 col-xs-12 d-flex flex-column align-items-center justify-content-evenly hourglass-bottom"
     >
       <button
         type="button"
-        class="button-user btn btn-light button-bg-light button-active d-flex justify-content-center align-items-center"
+        class="button-login btn btn-light button-bg-light button-active d-flex justify-content-center align-items-center"
       >
         <i class="bi bi-door-open-fill"></i>
-        <span>USER</span>
+        <span>LOG IN</span>
+      </button>
+      <button
+        type="button"
+        class="button-register btn btn-light button-bg-light button-active d-flex justify-content-center align-items-center"
+      >
+        <i class="bi bi-door-open-fill"></i>
+        <span>SIGN UP</span>
       </button>
     </div>
   </div>
