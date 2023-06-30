@@ -29,7 +29,7 @@
           [(ngModel)]="guestName"
         />
         <button
-          *ngIf="guestName.length > 3"
+          [disabled]="guestName.length < 3 || guestName.length > 16"
           class="btn btn-dark button-bg-dark"
           type="submit"
           (click)="handleGuestRegistered()"
