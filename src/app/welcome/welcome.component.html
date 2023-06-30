@@ -22,8 +22,14 @@
           (click)="isEnterGuestName = false"
         ></button>
         <label class="form-label">GUEST USERNAME:</label>
-        <input class="form-control" type="text" [(ngModel)]="guestName" />
+        <input
+          class="form-control"
+          type="text"
+          name="guestName"
+          [(ngModel)]="guestName"
+        />
         <button
+          *ngIf="guestName.length > 3"
           class="btn btn-dark button-bg-dark"
           type="submit"
           (click)="handleGuestRegistered()"

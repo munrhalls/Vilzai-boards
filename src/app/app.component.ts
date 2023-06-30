@@ -29,8 +29,8 @@ export class AppComponent implements OnInit {
   checkAuth() {
     return null;
   }
-  onGuestRegistered() {
-    this.activeUser = new User(true, Math.random().toString(), []);
+  onGuestRegistered(username: string) {
+    this.activeUser = new User(true, username, []);
     localStorage.setItem('guest-user', JSON.stringify(this.activeUser));
     console.log(localStorage.getItem('guest-user'));
     this.selectedBoard = this.activeUser.boards[0];
