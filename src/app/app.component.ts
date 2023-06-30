@@ -11,7 +11,6 @@ import { guestData } from './users.data';
 export class AppComponent implements OnInit {
   title = 'VILZAI BOARDS';
   activeUser: null | User = null;
-  guestUsername: null | string = null;
   selectedBoard: null | Board = null;
   boardSelectHooks: null | BoardSelectHook[] = null;
 

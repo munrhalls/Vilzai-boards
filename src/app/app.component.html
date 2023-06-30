@@ -1,5 +1,6 @@
 <app-header
   *ngIf="activeUser !== null"
+  [username]="activeUser.username"
   [boardSelectHooks]="boardSelectHooks"
   (boardSelected)="onBoardSelected($event)"
 ></app-header>
