@@ -1,0 +1,11 @@
+.dropdown-item-mobile-username {
+  display: none;
+}
+.dropdown-item i {
+  margin-right: 1rem;
+}
+@media screen and (max-width: 576px) {
+  .dropdown-item-mobile-username {
+    display: block;
+  }
+}

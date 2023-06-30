@@ -9,9 +9,19 @@
     <i class="bi bi-person-circle icon-button-active icon-button-large"></i>
   </button>
   <ul class="dropdown-menu">
+    <li class="dropdown-item-mobile-username">
+      <div class="dropdown-item button-active">
+        <div>Logged in as:</div>
+        <div>
+          <i class="bi bi-person-circle icon-button-active"></i>
+          <span>{{ username }}</span>
+        </div>
+      </div>
+    </li>
     <li>
       <a class="dropdown-item button-active">
-        <i class="bi bi-person-circle icon-button-active"></i>
+        <i class="bi bi-clipboard-fill"></i>
+        <span>LOG OUT</span>
       </a>
     </li>
   </ul>
