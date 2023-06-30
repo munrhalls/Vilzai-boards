@@ -79,3 +79,26 @@ body {
     width: 6rem;
   }
 }
+
+/* FORMS */
+form {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+form .btn-close {
+  margin-left: auto;
+}
+form label {
+  font-weight: bold;
+}
+form button {
+  margin-top: 1rem;
+}
+
+.form-error {
+  color: red;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}

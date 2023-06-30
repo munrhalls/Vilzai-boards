@@ -36,6 +36,9 @@
         >
           SUBMIT
         </button>
+        <p *ngIf="guestName.length > 16" class="form-error">
+          Maximum 16 characters.
+        </p>
       </form>
     </div>
     <div
