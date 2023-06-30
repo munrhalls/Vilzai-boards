@@ -1,12 +1,12 @@
 <app-header
-  *ngIf="showWelcome === false"
+  *ngIf="activeUser !== null"
   [boardSelectHooks]="boardSelectHooks"
   (boardSelected)="onBoardSelected($event)"
 ></app-header>
 <app-welcome
-  *ngIf="showWelcome === true"
+  *ngIf="activeUser === null"
   style="flex: 1"
   (guestRegistered)="onGuestRegistered()"
 ></app-welcome>
 
-<app-board *ngIf="showWelcome === false" [board]="selectedBoard"></app-board>
+<app-board *ngIf="activeUser !== null" [board]="selectedBoard"></app-board>
