@@ -12,15 +12,69 @@
 .col {
   height: 75%;
 }
+.hourglass-top {
+  align-items: center;
+}
+.hourglass-bottom {
+  align-items: center;
+}
 .button-guest {
-  margin-top: 2rem;
+  margin-top: -2rem;
   font-weight: bold;
+  height: 4rem;
 }
 .button-user {
-  margin-bottom: 2rem;
+  margin-bottom: -2rem;
   font-weight: bold;
+  height: 4rem;
 }
 i {
   font-size: 1.5rem;
   margin-right: 0.5rem;
+}
+@media screen and (max-width: 576px) {
+  .hourglass-top {
+    align-items: start;
+  }
+  .hourglass-bottom {
+    align-items: end;
+  }
+  .button-guest {
+    margin-top: 2rem;
+    height: initial;
+  }
+  .button-user {
+    margin-bottom: 2rem;
+    height: initial;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button-guest {
+    margin-top: -2rem;
+    padding: 0 2rem;
+    height: 8rem;
+  }
+  .button-user {
+    margin-bottom: -2rem;
+    padding: 0 2rem;
+    height: 8rem;
+  }
+  i {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .button-guest {
+    margin-top: -2rem;
+
+    height: 10rem;
+  }
+  .button-user {
+    margin-bottom: -2rem;
+
+    height: 10rem;
+  }
+  i {
+    font-size: 2.25rem;
+  }
 }
