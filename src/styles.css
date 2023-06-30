@@ -31,6 +31,9 @@ body {
 .button-bg-dark {
   --bs-btn-bg: #000;
 }
+.button-bg-light {
+  --bs-btn-bg: #fff;
+}
 .button-text-dark {
   font-weight: bold;
 }
