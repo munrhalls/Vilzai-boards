@@ -7,8 +7,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class WelcomeComponent {
   @Output() guestRegistered = new EventEmitter();
+  isEnterGuestName: boolean = false;
+  guestName: string = '';
 
   handleGuestRegistered() {
-    this.guestRegistered.emit();
+    this.guestRegistered.emit(this.guestName);
   }
 }

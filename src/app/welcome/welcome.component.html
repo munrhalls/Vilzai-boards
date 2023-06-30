@@ -3,13 +3,29 @@
   <div class="row clepsidre-background">
     <div class="col-12 col-xs-12 d-flex justify-content-center hourglass-top">
       <button
+        *ngIf="isEnterGuestName === false"
         type="button"
         class="button-guest btn btn-dark button-bg-dark button-active d-flex justify-content-center align-items-center"
-        (click)="handleGuestRegistered()"
+        (click)="isEnterGuestName = true"
       >
         <i class="bi bi-door-open-fill"></i>
         <span>GUEST</span>
       </button>
+      <form
+        class="d-flex flex-column justify-content-evenly"
+        *ngIf="isEnterGuestName === true"
+      >
+        <button type="button" class="btn-close" aria-label="Close"></button>
+        <label class="form-label">GUEST USERNAME:</label>
+        <input class="form-control" type="text" [(ngModel)]="guestName" />
+        <button
+          class="btn btn-dark button-bg-dark"
+          type="submit"
+          (click)="handleGuestRegistered()"
+        >
+          SUBMIT
+        </button>
+      </form>
     </div>
     <div
       class="col-12 col-xs-12 d-flex flex-column align-items-center justify-content-evenly hourglass-bottom"

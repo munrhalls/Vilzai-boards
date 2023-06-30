@@ -97,3 +97,18 @@ i {
     font-size: 2.25rem;
   }
 }
+
+form {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+form .btn-close {
+  margin-left: auto;
+}
+form label {
+  font-weight: bold;
+}
+form button {
+  margin-top: 1rem;
+}
