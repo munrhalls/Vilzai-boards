@@ -3,6 +3,10 @@
   [boardSelectHooks]="boardSelectHooks"
   (boardSelected)="onBoardSelected($event)"
 ></app-header>
-<app-welcome *ngIf="showWelcome === true" style="flex: 1"></app-welcome>
+<app-welcome
+  *ngIf="showWelcome === true"
+  style="flex: 1"
+  (guestRegistered)="onGuestRegistered()"
+></app-welcome>
 
 <app-board *ngIf="showWelcome === false" [board]="selectedBoard"></app-board>

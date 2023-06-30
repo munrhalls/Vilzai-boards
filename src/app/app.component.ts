@@ -11,6 +11,7 @@ import { usersData } from './users.data';
 export class AppComponent implements OnInit {
   title = 'kanboard';
   testUser = usersData[0];
+  guestUser: null | User = null;
   activeUser: User = this.testUser;
   selectedBoard: Board = this.testUser.boards[0];
   boardSelectHooks: BoardSelectHook[] = this.testUser.boards.map((board) => {
@@ -28,12 +29,22 @@ export class AppComponent implements OnInit {
       this.selectedBoard = selectedBoard;
     }
   }
+  checkAuth() {
+    return null;
+  }
+  onGuestRegistered() {
+    this.guestUser = new User(Math.random().toString(), []);
+    localStorage.setItem('guest-user', JSON.stringify(this.guestUser));
+    console.log(localStorage.getItem('guest-user'));
+  }
   ngOnInit(): void {
-    const activeUserStr = localStorage.getItem('activeUser');
+    const activeUser = this.checkAuth();
+    if (activeUser === null) {
+      const guestUser = localStorage.getItem('guest-user');
 
-    if (activeUserStr) {
-      this.activeUser = JSON.parse(activeUserStr);
-    } else {
+      if (guestUser) {
+        this.guestUser = JSON.parse(guestUser);
+      }
     }
   }
 }

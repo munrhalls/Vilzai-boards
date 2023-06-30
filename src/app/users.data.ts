@@ -1,7 +1,7 @@
 import { User } from './user.model';
 
 export const usersData: User[] = [
-  new User('Test user', [
+  new User('Guest User', [
     {
       id: Math.random() * Math.random(),
       title: 'Board A',
