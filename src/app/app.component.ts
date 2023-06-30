@@ -25,14 +25,24 @@ export class AppComponent implements OnInit {
       }
     }
   }
-  onLoggedOut() {
-    this.activeUser = null;
-  }
   checkAuth() {
     return null;
   }
+  onLoggedOut() {
+    if (this.activeUser === null) return;
+    const boards = this.activeUser.boards;
+    const userData = JSON.stringify({
+      guest: this.activeUser.guest,
+      username: this.activeUser.username,
+      isLoggedIn: false,
+      boards: boards,
+    });
+    localStorage.setItem('guest-user', userData);
+    this.activeUser = null;
+  }
+
   onGuestRegistered(username: string) {
-    this.activeUser = new User(true, username, guestData);
+    this.activeUser = new User(true, username, true, guestData);
     localStorage.setItem('guest-user', JSON.stringify(this.activeUser));
     console.log(localStorage.getItem('guest-user'));
     this.selectedBoard = this.activeUser.boards[0];
@@ -49,7 +59,10 @@ export class AppComponent implements OnInit {
       const activeUser = localStorage.getItem('guest-user');
 
       if (activeUser) {
-        this.activeUser = JSON.parse(activeUser);
+        const guest = JSON.parse(activeUser);
+        if (guest.isLoggedIn === true) {
+          this.activeUser = guest;
+        }
       }
     }
   }
