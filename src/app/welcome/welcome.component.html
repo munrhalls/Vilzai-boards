@@ -15,7 +15,12 @@
         class="d-flex flex-column justify-content-evenly"
         *ngIf="isEnterGuestName === true"
       >
-        <button type="button" class="btn-close" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="isEnterGuestName = false"
+        ></button>
         <label class="form-label">GUEST USERNAME:</label>
         <input class="form-control" type="text" [(ngModel)]="guestName" />
         <button
