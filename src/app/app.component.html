@@ -1,4 +1,5 @@
 <app-header
+  *ngIf="showWelcome === false"
   [boardSelectHooks]="boardSelectHooks"
   (boardSelected)="onBoardSelected($event)"
 ></app-header>
