@@ -40,6 +40,12 @@ export class AppComponent implements OnInit {
   }
   onGuestSession() {
     this.activeUser = new User('guest', 0, guestData);
+    this.boardSelectHooks = this.activeUser.boards.map((board, index) => {
+      return {
+        index: index,
+        title: board.title,
+      };
+    });
     localStorage.setItem('guest', JSON.stringify(this.activeUser));
   }
 
@@ -55,5 +61,6 @@ export class AppComponent implements OnInit {
       localStorage.removeItem('guest');
     }
     this.activeUser = null;
+    this.boardSelectHooks = null;
   }
 }
