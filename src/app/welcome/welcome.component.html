@@ -2,26 +2,16 @@
   <img src="../assets/LOGO_COLUMN.png" alt="" class="welcome-logo-column" />
   <div class="row clepsidre-background">
     <div
-      class="col-12 col-xs-12 d-flex flex-column align-items-center justify-content-start hourglass-top"
+      class="col-12 col-xs-12 d-flex flex-column align-items-center justify-content-center hourglass-top"
     >
       <button
         *ngIf="isEnterGuestLogin === false"
         type="button"
-        class="button-guest-login btn btn-dark button-bg-dark button-active d-flex justify-content-top align-items-center"
+        class="button-guest btn btn-dark button-bg-dark button-active d-flex justify-content-evenly align-items-center"
         (click)="isEnterGuestLogin = true"
       >
         <i class="bi bi-door-open-fill"></i>
-        <span>GUEST LOG IN</span>
-      </button>
-
-      <button
-        *ngIf="isRegisterGuestName === false"
-        type="button"
-        class="button-guest-signup btn btn-dark button-bg-dark button-active d-flex justify-content-center align-items-center"
-        (click)="isRegisterGuestName = true"
-      >
-        <i class="bi bi-door-open-fill"></i>
-        <span>GUEST SIGN UP</span>
+        <span>GUEST</span>
       </button>
 
       <form
@@ -59,14 +49,14 @@
     >
       <button
         type="button"
-        class="button-login btn btn-light button-bg-light button-active d-flex justify-content-center align-items-center"
+        class="button-login btn btn-light button-bg-light button-active d-flex justify-content-evenly align-items-center"
       >
         <i class="bi bi-door-open-fill"></i>
         <span>LOG IN</span>
       </button>
       <button
         type="button"
-        class="button-register btn btn-light button-bg-light button-active d-flex justify-content-center align-items-center"
+        class="button-register btn btn-light button-bg-light button-active d-flex justify-content-evenly align-items-center"
       >
         <i class="bi bi-door-open-fill"></i>
         <span>SIGN UP</span>
