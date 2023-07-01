@@ -11,4 +11,7 @@
   (guestSession)="onGuestSession()"
 ></app-welcome>
 
-<app-board *ngIf="activeUser !== null" [board]="selectedBoard"></app-board>
+<app-board
+  *ngIf="activeUser !== null"
+  [board]="activeUser.activeBoard"
+></app-board>

@@ -11,19 +11,25 @@ import { guestData } from './guest.data';
 export class AppComponent implements OnInit {
   title = 'VILZAI BOARDS';
   activeUser: null | User = null;
-  selectedBoard: null | Board = null;
   boardSelectHooks: null | BoardSelectHook[] = null;
-  guestSession: any;
+  guestSessionPeriodicSave: any;
 
   ngOnInit(): void {
     if (this.activeUser === null) {
       const guestSession = localStorage.getItem('guest');
+      console.log(guestSession);
+
       if (guestSession) {
-        this.activeUser = new User('guest', JSON.parse(guestSession));
+        this.activeUser = JSON.parse(guestSession);
+        this.guestSessionPeriodicSave = setInterval(() => {
+          localStorage.setItem('guest', JSON.stringify(this.activeUser));
+        }, 5000);
+      } else {
+        clearInterval(this.guestSessionPeriodicSave);
       }
     }
-    if (this.activeUser) {
-      this.selectedBoard = this.activeUser.boards[0];
+
+    if (this.activeUser !== null) {
       this.boardSelectHooks = this.activeUser.boards.map((board) => {
         return {
           id: board.id,
@@ -33,8 +39,9 @@ export class AppComponent implements OnInit {
     }
   }
   onGuestSession() {
-    localStorage.setItem('guest', JSON.stringify(guestData));
-    this.activeUser = new User('guest', guestData);
+    const guest = new User('guest', guestData[0], guestData);
+    localStorage.setItem('guest', JSON.stringify(guest));
+    this.activeUser = guest;
   }
 
   onBoardSelected(id: number) {
@@ -44,9 +51,14 @@ export class AppComponent implements OnInit {
       );
 
       if (selectedBoard !== undefined) {
-        this.selectedBoard = selectedBoard;
+        this.activeUser.activeBoard = selectedBoard;
       }
     }
   }
-  onLoggedOut() {}
+  onLoggedOut() {
+    if (this.activeUser?.username === 'guest') {
+      localStorage.removeItem('guest');
+    }
+    this.activeUser = null;
+  }
 }
