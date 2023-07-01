@@ -12,52 +12,46 @@ export class AppComponent implements OnInit {
   title = 'VILZAI BOARDS';
   activeUser: null | User = null;
   boardSelectHooks: null | BoardSelectHook[] = null;
-  guestSessionPeriodicSave: any;
+  guestPeriodicSave: any;
 
   ngOnInit(): void {
     if (this.activeUser === null) {
-      const guestSession = localStorage.getItem('guest');
-      console.log(guestSession);
+      const guest = localStorage.getItem('guest');
 
-      if (guestSession) {
-        this.activeUser = JSON.parse(guestSession);
-        this.guestSessionPeriodicSave = setInterval(() => {
+      if (guest) {
+        this.activeUser = JSON.parse(guest);
+        this.guestPeriodicSave = setInterval(() => {
           localStorage.setItem('guest', JSON.stringify(this.activeUser));
-        }, 5000);
+          console.log(this.activeUser?.boards.map((board) => board.id));
+        }, 2100);
       } else {
-        clearInterval(this.guestSessionPeriodicSave);
+        clearInterval(this.guestPeriodicSave);
       }
     }
 
     if (this.activeUser !== null) {
-      this.boardSelectHooks = this.activeUser.boards.map((board) => {
+      this.boardSelectHooks = this.activeUser.boards.map((board, index) => {
         return {
-          id: board.id,
+          index: index,
           title: board.title,
         };
       });
     }
   }
   onGuestSession() {
-    const guest = new User('guest', 0, guestData);
-    localStorage.setItem('guest', JSON.stringify(guest));
-    this.activeUser = guest;
+    this.activeUser = new User('guest', 0, guestData);
+    localStorage.setItem('guest', JSON.stringify(this.activeUser));
   }
 
-  onBoardSelected(id: number) {
-    if (this.activeUser !== null) {
-      const selectedBoardIndex = this.activeUser.boards.findIndex(
-        (board) => board.id === id
-      );
-
-      if (selectedBoardIndex > -1) {
-        this.activeUser.activeBoardIndex = selectedBoardIndex;
-        console.log(selectedBoardIndex);
-      }
-    }
+  onBoardSelected(index: number) {
+    this.activeUser!.activeBoardIndex = index;
+  }
+  getActiveBoard() {
+    return this.activeUser!.boards[this.activeUser!.activeBoardIndex];
   }
   onLoggedOut() {
-    if (this.activeUser?.username === 'guest') {
+    clearInterval(this.guestPeriodicSave);
+    if (this.activeUser!.username === 'guest') {
       localStorage.removeItem('guest');
     }
     this.activeUser = null;

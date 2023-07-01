@@ -24,5 +24,5 @@ export class Board {
 }
 
 export class BoardSelectHook {
-  constructor(readonly id: number, public title: string) {}
+  constructor(readonly index: number, public title: string) {}
 }

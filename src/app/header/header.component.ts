@@ -12,8 +12,8 @@ export class HeaderComponent {
   @Output() boardSelected = new EventEmitter<number>();
   @Output() loggedOut = new EventEmitter();
 
-  onBoardSelected(id: number) {
-    this.boardSelected.emit(id);
+  onBoardSelected(index: number) {
+    this.boardSelected.emit(index);
   }
   handleLoggedOut() {
     this.loggedOut.emit();

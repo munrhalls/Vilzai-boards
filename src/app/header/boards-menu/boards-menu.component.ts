@@ -10,7 +10,7 @@ export class BoardsMenuComponent {
   @Input() boardSelectHooks = [] as BoardSelectHook[] | null;
   @Output() boardSelected = new EventEmitter<number>();
 
-  handleBoardSelected(id: number) {
-    this.boardSelected.emit(id);
+  handleBoardSelected(index: number) {
+    this.boardSelected.emit(index);
   }
 }
