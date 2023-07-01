@@ -13,18 +13,15 @@ export class AppComponent implements OnInit {
   activeUser: null | User = null;
   selectedBoard: null | Board = null;
   boardSelectHooks: null | BoardSelectHook[] = null;
+  guestSession: any;
 
   ngOnInit(): void {
-    this.initializeBoards();
-  }
-  onGuestSession() {
-    const activeGuest = localStorage.setItem(
-      'guest',
-      JSON.stringify(guestData)
-    );
-    this.activeUser = new User('guest', guestData);
-  }
-  initializeBoards() {
+    if (this.activeUser === null) {
+      const guestSession = localStorage.getItem('guest');
+      if (guestSession) {
+        this.activeUser = new User('guest', JSON.parse(guestSession));
+      }
+    }
     if (this.activeUser) {
       this.selectedBoard = this.activeUser.boards[0];
       this.boardSelectHooks = this.activeUser.boards.map((board) => {
@@ -35,6 +32,11 @@ export class AppComponent implements OnInit {
       });
     }
   }
+  onGuestSession() {
+    localStorage.setItem('guest', JSON.stringify(guestData));
+    this.activeUser = new User('guest', guestData);
+  }
+
   onBoardSelected(id: number) {
     if (this.activeUser !== null) {
       const selectedBoard = this.activeUser.boards.find(
