@@ -3,7 +3,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from '../environments/environment';
+import { environment } from './../../environments/environment';
 
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -18,7 +18,6 @@ import { BoardHeaderComponent } from './board/board-header/board-header.componen
 import { BoardMenuComponent } from './board/board-header/board-menu/board-menu.component';
 import { BoardEditComponent } from './board/board-edit/board-edit.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { AuthenticationComponent } from './authentication/authentication.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     BoardMenuComponent,
     BoardEditComponent,
     WelcomeComponent,
-    AuthenticationComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
