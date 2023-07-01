@@ -39,19 +39,20 @@ export class AppComponent implements OnInit {
     }
   }
   onGuestSession() {
-    const guest = new User('guest', guestData[0], guestData);
+    const guest = new User('guest', 0, guestData);
     localStorage.setItem('guest', JSON.stringify(guest));
     this.activeUser = guest;
   }
 
   onBoardSelected(id: number) {
     if (this.activeUser !== null) {
-      const selectedBoard = this.activeUser.boards.find(
+      const selectedBoardIndex = this.activeUser.boards.findIndex(
         (board) => board.id === id
       );
 
-      if (selectedBoard !== undefined) {
-        this.activeUser.activeBoard = selectedBoard;
+      if (selectedBoardIndex > -1) {
+        this.activeUser.activeBoardIndex = selectedBoardIndex;
+        console.log(selectedBoardIndex);
       }
     }
   }
