@@ -1,4 +1,4 @@
-<div class="container-fluid welcome-container">
+<div *ngIf="isAuthUI === false" class="container-fluid welcome-container">
   <img src="../assets/LOGO_COLUMN.png" alt="" class="welcome-logo-column" />
   <div class="row clepsidre-background">
     <div
@@ -19,6 +19,7 @@
       <button
         type="button"
         class="button-login btn btn-light button-bg-light button-active d-flex justify-content-evenly align-items-center"
+        (click)="isAuthUI = true"
       >
         <i class="bi bi-person-vcard-fill"></i>
         <span>LOG IN</span>
@@ -26,6 +27,7 @@
       <button
         type="button"
         class="button-register btn btn-light button-bg-light button-active d-flex justify-content-evenly align-items-center"
+        (click)="isAuthUI = true"
       >
         <i class="bi bi-person-fill-add"></i>
         <span>SIGN UP</span>
@@ -33,3 +35,5 @@
     </div>
   </div>
 </div>
+
+<app-authentication *ngIf="isAuthUI === true"></app-authentication>

@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class WelcomeComponent {
   @Output() guestSession = new EventEmitter();
+  isAuthUI: boolean = false;
 
   handleGuestSession() {
     this.guestSession.emit();
