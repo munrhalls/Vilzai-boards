@@ -1,6 +1,9 @@
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { firebaseConfig } from '../server/firebase';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -25,7 +28,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
     BoardEditComponent,
     WelcomeComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirestore(() => getFirestore()),
+    BrowserModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
