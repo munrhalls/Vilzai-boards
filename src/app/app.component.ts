@@ -15,28 +15,14 @@ export class AppComponent implements OnInit {
   boardSelectHooks: null | BoardSelectHook[] = null;
 
   ngOnInit(): void {
-    this.handleGuestSession();
     this.initializeBoards();
   }
-  handleGuestSession() {
-    const activeGuest = localStorage.getItem('activeGuest');
-    if (activeGuest) {
-      const guestData = localStorage.getItem(activeGuest);
-      if (guestData) {
-        this.activeUser = new User(activeGuest, JSON.parse(guestData));
-      }
-    }
-  }
-  onGuestRegistered(username: string) {
-    localStorage.setItem(username, JSON.stringify(guestData));
-    localStorage.setItem('activeGuest', username);
-  }
-  onLoggedOut() {
-    localStorage.removeItem('activeGuest');
-    this.activeUser = null;
-  }
-  checkAuth() {
-    return null;
+  onGuestSession() {
+    const activeGuest = localStorage.setItem(
+      'guest',
+      JSON.stringify(guestData)
+    );
+    this.activeUser = new User('guest', guestData);
   }
   initializeBoards() {
     if (this.activeUser) {
@@ -60,4 +46,5 @@ export class AppComponent implements OnInit {
       }
     }
   }
+  onLoggedOut() {}
 }

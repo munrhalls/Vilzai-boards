@@ -6,17 +6,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent {
-  @Output() guestRegistered = new EventEmitter();
-  @Output() guestLoggedIn = new EventEmitter();
+  @Output() guestSession = new EventEmitter();
 
-  isEnterGuestLogin: boolean = false;
-  isRegisterGuestName: boolean = false;
-  guestName: string = '';
-
-  handleGuestRegistered() {
-    this.guestRegistered.emit(this.guestName);
-  }
-  handleGuestLoggedIn() {
-    this.guestLoggedIn.emit(this.guestName);
+  handleGuestSession() {
+    this.guestSession.emit();
   }
 }

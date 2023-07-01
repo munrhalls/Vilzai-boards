@@ -5,44 +5,13 @@
       class="col-12 col-xs-12 d-flex flex-column align-items-center justify-content-center hourglass-top"
     >
       <button
-        *ngIf="isEnterGuestLogin === false"
         type="button"
         class="button-guest btn btn-dark button-bg-dark button-active d-flex justify-content-evenly align-items-center"
-        (click)="isEnterGuestLogin = true"
+        (click)="handleGuestSession()"
       >
         <i class="bi bi-door-open-fill"></i>
         <span>GUEST</span>
       </button>
-
-      <form
-        class="d-flex flex-column justify-content-evenly"
-        *ngIf="isEnterGuestLogin === true"
-      >
-        <button
-          type="button"
-          class="btn-close"
-          aria-label="Close"
-          (click)="isEnterGuestLogin = false"
-        ></button>
-        <label class="form-label">GUEST USERNAME:</label>
-        <input
-          class="form-control"
-          type="text"
-          name="guestName"
-          [(ngModel)]="guestName"
-        />
-        <button
-          [disabled]="guestName.length < 3 || guestName.length > 16"
-          class="btn btn-dark button-bg-dark"
-          type="submit"
-          (click)="handleGuestRegistered()"
-        >
-          SUBMIT
-        </button>
-        <p *ngIf="guestName.length > 16" class="form-error">
-          Maximum 16 characters.
-        </p>
-      </form>
     </div>
     <div
       class="col-12 col-xs-12 d-flex flex-column align-items-center justify-content-end hourglass-bottom"

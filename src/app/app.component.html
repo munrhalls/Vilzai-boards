@@ -8,7 +8,7 @@
 <app-welcome
   *ngIf="activeUser === null"
   style="flex: 1"
-  (guestRegistered)="onGuestRegistered($event)"
+  (guestSession)="onGuestSession()"
 ></app-welcome>
 
 <app-board *ngIf="activeUser !== null" [board]="selectedBoard"></app-board>
