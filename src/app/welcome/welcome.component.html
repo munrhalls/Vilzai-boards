@@ -5,20 +5,20 @@
       class="col-12 col-xs-12 d-flex flex-column align-items-center justify-content-start hourglass-top"
     >
       <button
-        *ngIf="isEnterGuestName === false"
+        *ngIf="isEnterGuestLogin === false"
         type="button"
         class="button-guest-login btn btn-dark button-bg-dark button-active d-flex justify-content-top align-items-center"
-        (click)="isEnterGuestName = true"
+        (click)="isEnterGuestLogin = true"
       >
         <i class="bi bi-door-open-fill"></i>
         <span>GUEST LOG IN</span>
       </button>
 
       <button
-        *ngIf="isEnterGuestName === false"
+        *ngIf="isRegisterGuestName === false"
         type="button"
         class="button-guest-signup btn btn-dark button-bg-dark button-active d-flex justify-content-center align-items-center"
-        (click)="isEnterGuestName = true"
+        (click)="isRegisterGuestName = true"
       >
         <i class="bi bi-door-open-fill"></i>
         <span>GUEST SIGN UP</span>
@@ -26,13 +26,13 @@
 
       <form
         class="d-flex flex-column justify-content-evenly"
-        *ngIf="isEnterGuestName === true"
+        *ngIf="isEnterGuestLogin === true"
       >
         <button
           type="button"
           class="btn-close"
           aria-label="Close"
-          (click)="isEnterGuestName = false"
+          (click)="isEnterGuestLogin = false"
         ></button>
         <label class="form-label">GUEST USERNAME:</label>
         <input
