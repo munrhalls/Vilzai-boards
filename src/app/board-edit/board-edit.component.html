@@ -5,18 +5,47 @@
     >
       <div class="col-8 col-xs-8 col-md-8">
         <label class="form-label">NAME: </label>
-        <input class="form-control" type="text" value="title" />
+        <input
+          class="form-control"
+          type="text"
+          name="title"
+          [(ngModel)]="board.title"
+        />
       </div>
     </div>
+    <div class="columns pb-3 row">
+      <div
+        class="column mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
+        *ngFor="let col of board.columns; let i = index"
+      >
+        <header>
+          <h2>
+            <input
+              type="text"
+              [name]="col.title + 'i'"
+              [(ngModel)]="col.title"
+              value="col.title"
+            />
+          </h2>
+        </header>
 
+        <div class="row" *ngFor="let task of col.tasks">
+          <div class="task-container col-xs-12">
+            <p class="p-3 task" [ngStyle]="{ background: task.color }">
+              {{ task.text }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div>
       <button
+        type="submit"
         class="btn btn-dark button-dark btn-lg"
         (click)="handleBoardDisplayModeSet()"
       >
         BACK
       </button>
-      <button type="submit" class="btn btn-success btn-lg">SAVE</button>
     </div>
   </form>
 </div>
