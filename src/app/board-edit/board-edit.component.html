@@ -4,7 +4,6 @@
       class="board-header-edit row d-flex justify-content-center align-items-center"
     >
       <div class="col-8 col-xs-8 col-md-8">
-        <label class="form-label">NAME: </label>
         <input
           class="form-control"
           type="text"
@@ -21,18 +20,23 @@
         <header>
           <h2>
             <input
+              class="form-control"
               type="text"
               [name]="col.title + 'i'"
               [(ngModel)]="col.title"
-              value="col.title"
             />
           </h2>
         </header>
 
-        <div class="row" *ngFor="let task of col.tasks">
+        <div class="row" *ngFor="let task of col.tasks; let i = index">
           <div class="task-container col-xs-12">
             <p class="p-3 task" [ngStyle]="{ background: task.color }">
-              {{ task.text }}
+              <input
+                class="form-control"
+                type="text"
+                [name]="task.text + 'i'"
+                [(ngModel)]="task.text"
+              />
             </p>
           </div>
         </div>
