@@ -19,7 +19,7 @@ import { BoardMenuComponent } from './board/board-header/board-menu/board-menu.c
 import { BoardEditComponent } from './board-edit/board-edit.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BoardAddComponent } from './board/board-add/board-add.component';
-import { BoardHeaderEditComponent } from './board/board-header-edit/board-header-edit.component';
+import { BoardHeaderEditComponent } from './board-edit/board-header-edit/board-header-edit.component';
 
 @NgModule({
   declarations: [

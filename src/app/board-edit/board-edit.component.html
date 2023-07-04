@@ -1,13 +1,22 @@
 <div *ngIf="board !== null" class="container">
-  <app-board-header-edit [title]="board.title"></app-board-header-edit>
-
-  <div>
-    <button
-      class="btn btn-dark button-dark btn-lg"
-      (click)="handleBoardDisplayModeSet()"
+  <form>
+    <div
+      class="board-header-edit row d-flex justify-content-center align-items-center"
     >
-      BACK
-    </button>
-    <button class="btn btn-success btn-lg">SAVE</button>
-  </div>
+      <div class="col-8 col-xs-8 col-md-8">
+        <label class="form-label">NAME: </label>
+        <input class="form-control" type="text" value="title" />
+      </div>
+    </div>
+
+    <div>
+      <button
+        class="btn btn-dark button-dark btn-lg"
+        (click)="handleBoardDisplayModeSet()"
+      >
+        BACK
+      </button>
+      <button type="submit" class="btn btn-success btn-lg">SAVE</button>
+    </div>
+  </form>
 </div>
