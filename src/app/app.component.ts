@@ -11,9 +11,8 @@ import { guestData } from './guest.data';
 export class AppComponent implements OnInit {
   title = 'VILZAI BOARDS';
   activeUser: null | User = null;
-  boardMode: 'display' | 'edit' | 'add' = 'display';
+  boardMode: 'display' | 'edit' | 'add' | 'deleted' = 'display';
   boardSelectHooks: null | BoardSelectHook[] = null;
-  afterBoardDeletedPrompt: boolean = false;
   guestPeriodicSave: any;
 
   ngOnInit(): void {
@@ -55,7 +54,7 @@ export class AppComponent implements OnInit {
   }
   onBoardSelected(index: number) {
     this.activeUser!.activeBoardIndex = index;
-    this.afterBoardDeletedPrompt = false;
+    this.boardMode = 'display';
   }
   onBoardAddedPrompt() {
     this.boardMode = 'add';
@@ -71,7 +70,7 @@ export class AppComponent implements OnInit {
       (board) => board.id !== id
     );
     this.activeUser!.activeBoardIndex = null;
-    this.afterBoardDeletedPrompt = true;
+    this.boardMode = 'deleted';
     this.setBoardSelectHooks();
   }
   getActiveBoard() {

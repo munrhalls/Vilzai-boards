@@ -12,6 +12,7 @@
     (boardAddedPrompt)="onBoardAddedPrompt()"
     (loggedOut)="onLoggedOut()"
   ></app-header>
+
   <app-board
     *ngIf="boardMode === 'display'"
     [board]="getActiveBoard()"
@@ -19,8 +20,8 @@
   ></app-board>
 
   <app-board-add
-    (boardAdded)="onBoardAdded($event)"
     *ngIf="boardMode === 'add'"
+    (boardAdded)="onBoardAdded($event)"
   ></app-board-add>
 
   <app-board-edit
@@ -28,26 +29,7 @@
     [board]="getActiveBoard()"
   ></app-board-edit>
 
-  <div
-    class="no-board-selected"
-    *ngIf="
-      activeUser !== null &&
-      activeUser.activeBoardIndex === null &&
-      afterBoardDeletedPrompt === false
-    "
-  >
-    <div class="row justify-content-center align-items-center">
-      <div class="col-8">
-        <h2>No board selected</h2>
-        <p>
-          Use the board dropdown menu in the top section to select another board
-          to display or make a new one.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="after-board-deleted" *ngIf="afterBoardDeletedPrompt === true">
+  <div *ngIf="boardMode === 'deleted'" class="after-board-deleted">
     <div class="row justify-content-center align-items-center">
       <div class="col-8">
         <h2>Board deleted</h2>
