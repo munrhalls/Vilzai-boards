@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   boardMode: 'display' | 'edit' | 'add' = 'display';
   boardSelectHooks: null | BoardSelectHook[] = null;
   afterBoardDeletedPrompt: boolean = false;
-
   guestPeriodicSave: any;
 
   ngOnInit(): void {
