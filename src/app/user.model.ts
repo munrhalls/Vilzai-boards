@@ -3,7 +3,7 @@ import { Board } from './board.model';
 export class User {
   constructor(
     readonly username: string,
-    public activeBoardIndex: number,
+    public activeBoardIndex: null | number,
     public boards: Board[]
   ) {}
 }

@@ -1,1 +1,27 @@
-<p>board-menu works!</p>
+<div class="dropdown container-dropdown">
+  <button
+    class="btn btn-dark dropdown-toggle container-button-active"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <span class="button-text-dark">MENU</span>
+
+    <i class="bi bi-pencil-square icon-button-active"></i>
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="add-button-board dropdown-item button-active"
+        ><i class="bi bi-pen"></i> EDIT
+      </a>
+    </li>
+    <li>
+      <a
+        class="dropdown-item button-active"
+        (click)="handleBoardDeletedPrompt()"
+      >
+        <i class="bi bi-file-x"></i> DELETE</a
+      >
+    </li>
+  </ul>
+</div>

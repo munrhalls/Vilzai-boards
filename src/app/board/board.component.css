@@ -1,0 +1,32 @@
+/* COLUMN */
+.columns {
+  border: 3px solid #000;
+}
+.column header {
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.column header h2 {
+  padding: 0.5rem;
+}
+
+/* TASK */
+.task-container {
+  border-radius: 3px;
+}
+.task {
+  border-radius: 3px;
+}
+/* DELETE BOARD */
+.delete-prompt {
+  padding: 1rem;
+}
+.delete-prompt .row {
+  margin-bottom: 2.5rem;
+}
+
+.delete-prompt button {
+  font-size: 2rem;
+}

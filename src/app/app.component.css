@@ -1,0 +1,13 @@
+.after-board-deleted,
+.no-board-selected {
+  height: 100%;
+}
+
+.after-board-deleted h2 {
+  color: crimson;
+}
+
+.after-board-deleted,
+.no-board-selected .row {
+  height: 80%;
+}

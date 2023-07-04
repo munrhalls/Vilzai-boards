@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Board } from '../board.model';
 
 @Component({
@@ -8,4 +8,14 @@ import { Board } from '../board.model';
 })
 export class BoardComponent {
   @Input() board = {} as Board | null;
+  boardDeletedPrompt: boolean = false;
+  @Output() boardDeleted = new EventEmitter<number>();
+
+  onBoardDeletedPrompt() {
+    this.boardDeletedPrompt = true;
+  }
+  handleBoardDeleted() {
+    this.boardDeleted.emit(this.board!.id);
+    this.boardDeletedPrompt = false;
+  }
 }

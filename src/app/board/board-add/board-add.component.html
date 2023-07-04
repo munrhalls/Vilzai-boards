@@ -53,6 +53,7 @@
         [disabled]="columnsNum > 16 || columnsNum < 1"
         *ngIf="step === 2"
         class="btn btn-dark button-dark"
+        (click)="addBoard()"
       >
         <i class="bi bi-file-earmark-plus"></i> CREATE NEW BOARD
       </button>
