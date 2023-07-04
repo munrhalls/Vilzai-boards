@@ -10,13 +10,12 @@ export class BoardEditComponent {
   @Input() board = {} as Board | null;
   @Output() boardDisplayModeSet = new EventEmitter();
   @Output() boardUpdated = new EventEmitter<Board>();
-  title: string = this.board!.title;
+  taskColors: string[] = ['silver', 'orange', 'teal'];
 
   handleBoardDisplayModeSet() {
     this.boardDisplayModeSet.emit();
   }
   handleBoardUpdated() {
-    this.board!.title = this.title;
     this.boardUpdated.emit(this.board!);
     console.log('boardUpdated');
   }

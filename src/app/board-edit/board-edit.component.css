@@ -5,3 +5,27 @@
   padding: 1rem;
   color: #fff;
 }
+
+/* COLUMN */
+.columns {
+  border: 3px solid #000;
+}
+.column header {
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+  height: 6rem;
+}
+
+.column header input {
+  padding: 0.5rem 0.25rem;
+  margin: 0.5rem;
+}
+
+/* TASK */
+.task-container {
+  border-radius: 3px;
+}
+.task {
+  border-radius: 3px;
+}
