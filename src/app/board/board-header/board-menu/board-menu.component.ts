@@ -8,7 +8,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class BoardMenuComponent {
   isConfirmDelete: boolean = false;
   @Output() boardDeletedPrompt = new EventEmitter();
+  @Output() boardEditModeSet = new EventEmitter();
 
+  setBoardModeToEdit() {
+    this.boardEditModeSet.emit();
+  }
   handleBoardDeletedPrompt() {
     this.boardDeletedPrompt.emit();
   }

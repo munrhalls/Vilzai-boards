@@ -7,10 +7,14 @@ import { Board } from '../board.model';
   styleUrls: ['./board.component.css'],
 })
 export class BoardComponent {
-  @Input() board = {} as Board | null;
   boardDeletedPrompt: boolean = false;
+  @Input() board = {} as Board | null;
+  @Output() boardEditModeSet = new EventEmitter<number>();
   @Output() boardDeleted = new EventEmitter<number>();
 
+  onBoardEditModeSet() {
+    this.boardEditModeSet.emit();
+  }
   onBoardDeletedPrompt() {
     this.boardDeletedPrompt = true;
   }

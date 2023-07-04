@@ -1,5 +1,4 @@
-.after-board-deleted,
-.no-board-selected {
+.after-board-deleted {
   height: 100%;
 }
 
@@ -7,7 +6,6 @@
   color: crimson;
 }
 
-.after-board-deleted,
-.no-board-selected .row {
+.after-board-deleted .row {
   height: 80%;
 }

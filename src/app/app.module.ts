@@ -16,9 +16,10 @@ import { UserMenuComponent } from './header/user-menu/user-menu.component';
 import { BoardComponent } from './board/board.component';
 import { BoardHeaderComponent } from './board/board-header/board-header.component';
 import { BoardMenuComponent } from './board/board-header/board-menu/board-menu.component';
-import { BoardEditComponent } from './board/board-edit/board-edit.component';
+import { BoardEditComponent } from './board-edit/board-edit.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BoardAddComponent } from './board/board-add/board-add.component';
+import { BoardHeaderEditComponent } from './board/board-header-edit/board-header-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { BoardAddComponent } from './board/board-add/board-add.component';
     BoardEditComponent,
     WelcomeComponent,
     BoardAddComponent,
+    BoardHeaderEditComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

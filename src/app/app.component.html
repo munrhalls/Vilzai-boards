@@ -16,6 +16,8 @@
   <app-board
     *ngIf="boardMode === 'display'"
     [board]="getActiveBoard()"
+    (boardEditModeSet)="onBoardEditModeSet()"
+    (boardDisplayModeSet)="onBoardDisplayModeSet()"
     (boardDeleted)="onBoardDeleted($event)"
   ></app-board>
 
@@ -26,6 +28,7 @@
 
   <app-board-edit
     *ngIf="boardMode === 'edit'"
+    (boardDisplayModeSet)="onBoardDisplayModeSet()"
     [board]="getActiveBoard()"
   ></app-board-edit>
 

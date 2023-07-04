@@ -1,5 +1,6 @@
 <div *ngIf="board !== null" class="container">
   <app-board-header
+    (boardEditModeSet)="onBoardEditModeSet()"
     (boardDeletedPrompt)="onBoardDeletedPrompt()"
     [title]="board.title"
   ></app-board-header>

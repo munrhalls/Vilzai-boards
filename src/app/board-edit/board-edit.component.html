@@ -1,0 +1,13 @@
+<div *ngIf="board !== null" class="container">
+  <app-board-header-edit [title]="board.title"></app-board-header-edit>
+
+  <div>
+    <button
+      class="btn btn-dark button-dark btn-lg"
+      (click)="handleBoardDisplayModeSet()"
+    >
+      BACK
+    </button>
+    <button class="btn btn-success btn-lg">SAVE</button>
+  </div>
+</div>

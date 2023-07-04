@@ -7,8 +7,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BoardHeaderComponent {
   @Input() title = '' as string;
+  @Output() boardEditModeSet = new EventEmitter();
   @Output() boardDeletedPrompt = new EventEmitter();
 
+  onBoardEditModeSet() {
+    this.boardEditModeSet.emit();
+  }
   onBoardDeletedPrompt() {
     this.boardDeletedPrompt.emit();
   }

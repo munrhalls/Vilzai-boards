@@ -65,6 +65,16 @@ export class AppComponent implements OnInit {
     this.boardMode = 'display';
     this.setBoardSelectHooks();
   }
+  onBoardEditModeSet() {
+    this.boardMode = 'edit';
+  }
+  onBoardDisplayModeSet() {
+    this.boardMode = 'display';
+  }
+  onBoardUpdated(board: Board) {
+    this.activeUser!.boards[this.activeUser!.activeBoardIndex!] = board;
+    console.log('board updated');
+  }
   onBoardDeleted(id: number) {
     this.activeUser!.boards = this.activeUser!.boards.filter(
       (board) => board.id !== id
