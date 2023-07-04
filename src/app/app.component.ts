@@ -11,6 +11,7 @@ import { guestData } from './guest.data';
 export class AppComponent implements OnInit {
   title = 'VILZAI BOARDS';
   activeUser: null | User = null;
+  boardMode: 'display' | 'edit' | 'add' = 'display';
   boardSelectHooks: null | BoardSelectHook[] = null;
   guestPeriodicSave: any;
 
@@ -22,7 +23,6 @@ export class AppComponent implements OnInit {
         this.activeUser = JSON.parse(guest);
         this.guestPeriodicSave = setInterval(() => {
           localStorage.setItem('guest', JSON.stringify(this.activeUser));
-          console.log(this.activeUser?.boards.map((board) => board.id));
         }, 2100);
       } else {
         clearInterval(this.guestPeriodicSave);
@@ -51,6 +51,9 @@ export class AppComponent implements OnInit {
 
   onBoardSelected(index: number) {
     this.activeUser!.activeBoardIndex = index;
+  }
+  onBoardAddedPrompt() {
+    this.boardMode = 'add';
   }
   getActiveBoard() {
     return this.activeUser!.boards[this.activeUser!.activeBoardIndex];

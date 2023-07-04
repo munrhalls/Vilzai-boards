@@ -1,0 +1,8 @@
+button {
+  display: block;
+}
+
+.error {
+  color: orangered;
+  margin-top: 0.5rem;
+}

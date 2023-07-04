@@ -10,10 +10,14 @@ export class HeaderComponent {
   @Input() boardSelectHooks = [] as BoardSelectHook[] | null;
   @Input() username = '';
   @Output() boardSelected = new EventEmitter<number>();
+  @Output() boardAddedPrompt = new EventEmitter();
   @Output() loggedOut = new EventEmitter();
 
   onBoardSelected(index: number) {
     this.boardSelected.emit(index);
+  }
+  onBoardAddedPrompt() {
+    this.boardAddedPrompt.emit();
   }
   handleLoggedOut() {
     this.loggedOut.emit();

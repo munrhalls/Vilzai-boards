@@ -18,6 +18,7 @@ import { BoardHeaderComponent } from './board/board-header/board-header.componen
 import { BoardMenuComponent } from './board/board-header/board-menu/board-menu.component';
 import { BoardEditComponent } from './board/board-edit/board-edit.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BoardAddComponent } from './board/board-add/board-add.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     BoardMenuComponent,
     BoardEditComponent,
     WelcomeComponent,
+    BoardAddComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

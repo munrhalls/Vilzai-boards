@@ -4,6 +4,7 @@
       <app-boards-menu
         [boardSelectHooks]="boardSelectHooks"
         (boardSelected)="onBoardSelected($event)"
+        (boardAddedPrompt)="onBoardAddedPrompt()"
       ></app-boards-menu>
     </div>
     <div class="col col-xs-2 col-sm-4 d-flex d-flex justify-content-center">

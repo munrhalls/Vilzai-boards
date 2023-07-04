@@ -5,11 +5,18 @@
     data-bs-toggle="dropdown"
     aria-expanded="false"
   >
-    <span class="button-text-dark">SELECT</span>
+    <span class="button-text-dark">BOARD</span>
 
     <i class="bi bi-clipboard-fill icon-button-active"></i>
   </button>
   <ul class="dropdown-menu">
+    <li>
+      <a
+        class="add-button-board dropdown-item button-active"
+        (click)="addBoard()"
+        ><i class="bi bi-file-earmark-plus"></i> CREATE NEW
+      </a>
+    </li>
     <li *ngFor="let boardSelect of boardSelectHooks">
       <a
         class="dropdown-item button-active"

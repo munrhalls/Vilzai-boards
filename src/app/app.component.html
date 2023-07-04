@@ -3,6 +3,7 @@
   [username]="activeUser.username"
   [boardSelectHooks]="boardSelectHooks"
   (boardSelected)="onBoardSelected($event)"
+  (boardAddedPrompt)="onBoardAddedPrompt()"
   (loggedOut)="onLoggedOut()"
 ></app-header>
 <app-welcome
@@ -11,4 +12,15 @@
   (guestSession)="onGuestSession()"
 ></app-welcome>
 
-<app-board *ngIf="activeUser !== null" [board]="getActiveBoard()"></app-board>
+<app-board
+  *ngIf="activeUser !== null && boardMode === 'display'"
+  [board]="getActiveBoard()"
+></app-board>
+
+<app-board-add
+  *ngIf="activeUser !== null && boardMode === 'add'"
+></app-board-add>
+
+<app-board-edit
+  *ngIf="activeUser !== null && boardMode === 'edit'"
+></app-board-edit>

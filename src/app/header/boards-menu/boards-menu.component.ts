@@ -9,7 +9,11 @@ import { BoardSelectHook } from '../../board.model';
 export class BoardsMenuComponent {
   @Input() boardSelectHooks = [] as BoardSelectHook[] | null;
   @Output() boardSelected = new EventEmitter<number>();
+  @Output() boardAddedPrompt = new EventEmitter();
 
+  addBoard() {
+    this.boardAddedPrompt.emit();
+  }
   handleBoardSelected(index: number) {
     this.boardSelected.emit(index);
   }
