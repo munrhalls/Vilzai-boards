@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Board } from 'src/app/board.model';
+import { Board, Column } from 'src/app/board.model';
 
 @Component({
   selector: 'app-board-edit',
@@ -12,6 +12,9 @@ export class BoardEditComponent {
   @Output() boardUpdated = new EventEmitter<Board>();
   taskColors: string[] = ['silver', 'orange', 'teal'];
 
+  onDragStart(event: Column) {
+    console.log(event);
+  }
   handleBoardDisplayModeSet() {
     this.boardDisplayModeSet.emit();
   }

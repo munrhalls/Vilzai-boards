@@ -17,12 +17,15 @@
       <div
         class="column mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
         *ngFor="let col of board.columns; let i = index"
+        draggable="true"
+        (dragstart)="onDragStart(col)"
       >
         <header
           class="mt-4 mb-1 d-flex justify-content-centerc align-items-center"
         >
           <input
             type="text"
+            class="form-control"
             [name]="col.title + 'i'"
             [(ngModel)]="col.title"
             value="col.title"
