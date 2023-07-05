@@ -3,7 +3,7 @@ import { Board } from './board.model';
 export const guestData: Board[] = [
   {
     id: Math.random() * Math.random(),
-    title: 'Example guest boards',
+    title: 'Example welcome board',
     columns: [
       {
         title: 'This app gives you boards..',
@@ -89,7 +89,7 @@ export const guestData: Board[] = [
         title: 'Enjoy using simple, no-nonsense task boards.',
         tasks: [
           {
-            text: 'Feel free to delete this welcome board using "MENU" button to the right of board title, and make your own',
+            text: 'Feel free to delete this welcome board using "MENU" button to the right of board title and make your own',
             color: 'darkorange',
             alottedTime: 10,
           },
