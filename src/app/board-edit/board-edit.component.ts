@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Board, Column } from 'src/app/board.model';
+import { Board, Column, Task } from 'src/app/board.model';
 
 @Component({
   selector: 'app-board-edit',
@@ -47,23 +47,29 @@ export class BoardEditComponent {
   //   constructor(
   //     public title: string,
   //     public tasks: Task[],
-  //     public orderNum: number
   //   ) {}
   // }
   // export class Task {
   //   constructor(
   //     public text: string,
   //     public color: string,
-  //     public orderNum: number,
   //     public alottedTime: null | number
   //   ) {}
   // }
-  // new Column('New column...', [new Task('Example new task..', 'silver', 0, null)], )
+
   addColumnAtIndex(i: number) {
-    // this.board!.columns.splice(i, 0, )
+    this.board!.columns.splice(
+      i,
+      0,
+      new Column('New column title...', [
+        new Task('Example new task 1..', 'silver', null),
+        new Task('Example new task 2..', 'green', null),
+        new Task('Example new task 3..', 'blue', null),
+      ])
+    );
   }
   deleteColumnAtIndex(i: number) {
-
+    this.board!.columns.splice(i, 1);
   }
   handleBoardDisplayModeSet() {
     this.boardDisplayModeSet.emit();
