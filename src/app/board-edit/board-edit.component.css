@@ -9,7 +9,6 @@
 /* DRAG  */
 .column-dragged {
   border-top: 15px solid #000;
-  top: 2rem;
   opacity: 0.6;
   cursor: move;
 }
@@ -34,11 +33,11 @@
 }
 
 .draggable .draggable-text {
-  display: none;
+  visibility: hidden;
 }
 
 .draggable:hover .draggable-text {
-  display: block;
+  visibility: visible;
 }
 
 .draggable-text {
