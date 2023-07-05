@@ -16,6 +16,7 @@
 .task-add {
   display: flex;
   border-top: 3px solid #fff;
+  margin: 1rem 0;
 }
 .task-add-button-container {
   display: flex;
