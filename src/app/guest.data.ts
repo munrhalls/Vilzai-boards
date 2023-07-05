@@ -31,52 +31,57 @@ export const guestData: Board[] = [
         ],
       },
       {
-        title: 'columns...',
+        title: 'This app gives you columns.....',
         tasks: [
           {
-            text: 'Task number #1',
-            color: 'silver',
+            text: 'You can easily re-order and move around columns using drag & drop',
+            color: 'orange',
             alottedTime: 10,
           },
           {
-            text: 'Handle documents',
+            text: 'To use drag & drop on columns, click edit in the "MENU" to the right of the board title',
             color: 'green',
             alottedTime: 10,
           },
           {
-            text: 'Drive to office',
-            color: 'darkblue',
+            text: 'This enables editing in an extremely simple, handy way ',
+            color: 'yellow',
             alottedTime: 30,
           },
           {
-            text: 'Ensure documents are handled properly',
+            text: 'When you drag and then drop a given column on top of another column, it re-orders the dropped column to that position',
+            color: 'blue',
+            alottedTime: 5,
+          },
+          {
+            text: 'You can add / delete a column (along with its tasks) with buttons to the right of each column in edit mode',
             color: 'silver',
+            alottedTime: 5,
+          },
+          {
+            text: 'So simple!',
+            color: 'blue',
             alottedTime: 5,
           },
         ],
       },
       {
-        title: '..and tasks',
+        title: 'This app gives you tasks...',
         tasks: [
           {
-            text: 'Organize desk',
+            text: 'Add, mark as done or delete tasks, using the menu buttons at the top of a column',
             color: 'silver',
             alottedTime: 10,
           },
           {
-            text: 'Get sticky notes and order colors by work type',
-            color: 'green',
+            text: 'To edit text of a task, click the task and use the pop-up menu',
+            color: 'silver',
             alottedTime: 10,
           },
           {
-            text: 'Place reminders on the board',
-            color: 'darkblue',
+            text: 'To edit color of a task, click the task and use the pop-up menu',
+            color: 'orange',
             alottedTime: 30,
-          },
-          {
-            text: 'Mark priority levels with orange and yellow sticky notes',
-            color: 'silver',
-            alottedTime: 5,
           },
         ],
       },
