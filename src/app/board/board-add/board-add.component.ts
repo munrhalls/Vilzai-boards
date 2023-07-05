@@ -36,15 +36,11 @@ export class BoardAddComponent implements OnInit {
       title: this.title,
       columns: this.columnTitles.map(
         (colTitle, index) =>
-          new Column(
-            colTitle,
-            [
-              new Task('Example task 1...', 'silver', 1, null),
-              new Task('Example task 2...', 'blue', 1, null),
-              new Task('Example task 3...', 'green', 1, null),
-            ],
-            index
-          )
+          new Column(colTitle, [
+            new Task('Example task 1...', 'silver', null),
+            new Task('Example task 2...', 'blue', null),
+            new Task('Example task 3...', 'green', null),
+          ])
       ),
     });
     console.log('added');
@@ -52,26 +48,4 @@ export class BoardAddComponent implements OnInit {
   ngOnInit() {
     this.step = 1;
   }
-  // export class Board {
-  //   constructor(
-  //     readonly id: number,
-  //     public title: string,
-  //     public columns: Column[]
-  //   ) {}
-  // }
-  // export class Column {
-  //   constructor(
-  //     public title: string,
-  //     public tasks: Task[],
-  //     public orderNum: number
-  //   ) {}
-  // }
-  // export class Task {
-  //   constructor(
-  //     public text: string,
-  //     public color: string,
-  //     public orderNum: number,
-  //     public alottedTime: null | number
-  //   ) {}
-  // }
 }

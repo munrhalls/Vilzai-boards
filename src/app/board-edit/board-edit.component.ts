@@ -43,6 +43,28 @@ export class BoardEditComponent {
     event.preventDefault();
     this.dragged.classList.remove('column-dragged');
   }
+  // export class Column {
+  //   constructor(
+  //     public title: string,
+  //     public tasks: Task[],
+  //     public orderNum: number
+  //   ) {}
+  // }
+  // export class Task {
+  //   constructor(
+  //     public text: string,
+  //     public color: string,
+  //     public orderNum: number,
+  //     public alottedTime: null | number
+  //   ) {}
+  // }
+  // new Column('New column...', [new Task('Example new task..', 'silver', 0, null)], )
+  addColumnAtIndex(i: number) {
+    // this.board!.columns.splice(i, 0, )
+  }
+  deleteColumnAtIndex(i: number) {
+
+  }
   handleBoardDisplayModeSet() {
     this.boardDisplayModeSet.emit();
   }

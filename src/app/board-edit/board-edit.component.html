@@ -26,10 +26,16 @@
         (dragend)="onDragEnd($event)"
       >
         <div class="dashed-border">
-          <button class="btn btn-success round-button add-column">
+          <button
+            class="btn btn-success round-button add-column"
+            (click)="addColumnAtIndex(i)"
+          >
             <i style="font-size: 1.5rem" class="bi bi-clipboard-plus"></i>
           </button>
-          <button class="btn btn-danger round-button delete-column">
+          <button
+            class="btn btn-danger round-button delete-column"
+            (click)="deleteColumnAtIndex(i)"
+          >
             <i style="font-size: 1.5rem" class="bi bi-clipboard-x-fill"></i>
           </button>
         </div>

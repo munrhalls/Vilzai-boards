@@ -7,90 +7,75 @@ export const guestData: Board[] = [
     columns: [
       {
         title: 'Column One',
-        orderNum: 0,
         tasks: [
           {
             text: 'Task number #1',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 10,
           },
           {
             text: 'Mow lawn',
             color: 'green',
-            orderNum: 0,
             alottedTime: 10,
           },
           {
             text: 'Paint canvas',
             color: 'darkblue',
-            orderNum: 0,
             alottedTime: 30,
           },
           {
             text: 'Add effects',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 5,
           },
         ],
       },
       {
         title: 'Column One',
-        orderNum: 0,
         tasks: [
           {
             text: 'Task number #1',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 10,
           },
           {
             text: 'Mow lawn',
             color: 'green',
-            orderNum: 0,
             alottedTime: 10,
           },
           {
             text: 'Paint canvas',
             color: 'd`arkblue',
-            orderNum: 0,
             alottedTime: 30,
           },
           {
             text: 'Add effects',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 5,
           },
         ],
       },
       {
         title: 'Column Two',
-        orderNum: 0,
         tasks: [
           {
             text: 'Task number #1',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 10,
           },
           {
             text: 'Mow lawn',
             color: 'green',
-            orderNum: 0,
             alottedTime: 10,
           },
           {
             text: 'Paint canvas',
             color: 'darkblue',
-            orderNum: 0,
             alottedTime: 30,
           },
           {
             text: 'Add effects',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 5,
           },
         ],
@@ -103,24 +88,20 @@ export const guestData: Board[] = [
     columns: [
       {
         title: 'Column One',
-        orderNum: 0,
         tasks: [
           {
             text: 'Mow lawn',
             color: 'green',
-            orderNum: 0,
             alottedTime: 10,
           },
           {
             text: 'Paint canvas',
             color: 'darkblue',
-            orderNum: 0,
             alottedTime: 30,
           },
           {
             text: 'Add effects',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 5,
           },
         ],
@@ -133,12 +114,10 @@ export const guestData: Board[] = [
     columns: [
       {
         title: 'Column Three',
-        orderNum: 0,
         tasks: [
           {
             text: 'Task number #1',
             color: 'silver',
-            orderNum: 0,
             alottedTime: 10,
           },
         ],
