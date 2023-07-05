@@ -70,7 +70,11 @@
 .column {
   position: relative;
 }
-
+@media screen and (max-width: 576px) {
+  .column {
+    margin-bottom: 3rem;
+  }
+}
 .dashed-border {
   position: absolute;
   right: -1px;
@@ -85,11 +89,25 @@
     border-right: none;
     border-bottom: 2px dashed silver;
     right: 0;
-    top: 100%;
-    bottom: -2px;
+    top: initial;
+    bottom: -1.5rem;
     width: 100%;
     height: 2px;
   }
+}
+
+.round-button {
+  position: absolute;
+  top: 33%;
+  left: 50%; /* this centers the button horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* this centers the button both vertically and horizontally */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; /* this makes the button round */
+  border: none; /* remove the default button border */
 }
 
 .column header {
