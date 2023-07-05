@@ -14,6 +14,13 @@
       </div>
     </div>
     <div class="columns pb-3 row">
+      <div class="drag-and-drop-header">
+        <i class="bi bi-hand-index-fill"></i
+        ><span
+          >Drag&nbsp;&&nbsp;drop&nbsp;a&nbsp;column
+          to&nbsp;change&nbsp;its&nbsp;order</span
+        >
+      </div>
       <div
         *ngFor="let col of board.columns; let i = index"
         class="column draggable mt-3 col-12 col-xs-12 col-sm-5 col-md-4 col-lg-3 col-xl-2"
@@ -39,7 +46,7 @@
             <i style="font-size: 1.5rem" class="bi bi-clipboard-x-fill"></i>
           </button>
         </div>
-        <div class="draggable-text">Drag to re-order columns</div>
+        <div class="draggable-text">Drag to re-order</div>
         <header
           class="mt-4 mb-1 d-flex justify-content-centerc align-items-center"
         >

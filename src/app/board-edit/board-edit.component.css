@@ -7,6 +7,12 @@
 }
 
 /* DRAG  */
+.drag-and-drop-header {
+  color: silver;
+}
+.drag-and-drop-header i {
+  margin-right: 0.75rem;
+}
 .column-dragged {
   border-top: 15px solid #000;
   opacity: 0.6;
