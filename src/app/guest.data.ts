@@ -75,13 +75,54 @@ export const guestData: Board[] = [
           },
           {
             text: 'To edit text of a task, click the task and use the pop-up menu',
-            color: 'silver',
+            color: 'gray',
             alottedTime: 10,
           },
           {
             text: 'To edit color of a task, click the task and use the pop-up menu',
             color: 'orange',
             alottedTime: 30,
+          },
+        ],
+      },
+      {
+        title: 'Enjoy using simple, no-nonsense task boards.',
+        tasks: [
+          {
+            text: 'Feel free to delete this welcome board using "MENU" button to the right of board title, and make your own',
+            color: 'darkorange',
+            alottedTime: 10,
+          },
+          {
+            text: 'You can easily line up similar tasks in a column',
+            color: 'blue',
+            alottedTime: 10,
+          },
+          {
+            text: 'You can just as easily make many of such columns, all held together in one board',
+            color: 'green',
+            alottedTime: 10,
+          },
+          {
+            text: 'On top of that, you can simply drag & drop these columns around to order them as you please',
+            color: 'lightblue',
+            alottedTime: 10,
+          },
+          {
+            text: 'It works for tasks, too, simply drag & drop to order them..',
+            color: 'yellow',
+            alottedTime: 10,
+          },
+          {
+            text: 'You can easily select a board and add / edit / delete any columns or tasks in it',
+            color: 'purple',
+            alottedTime: 10,
+          },
+
+          {
+            text: 'Glad to have you onboard, enjoy Vilzai boards!',
+            color: 'violet',
+            alottedTime: 10,
           },
         ],
       },
