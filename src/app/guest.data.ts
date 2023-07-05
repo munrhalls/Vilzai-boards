@@ -3,35 +3,35 @@ import { Board } from './board.model';
 export const guestData: Board[] = [
   {
     id: Math.random() * Math.random(),
-    title: 'Example guest board',
+    title: 'Example guest boards',
     columns: [
       {
-        title: 'Column One',
+        title: 'This app gives you boards..',
         tasks: [
           {
-            text: 'Task number #1',
-            color: 'silver',
+            text: 'You can create a new board by clicking "BOARD" in the top header section',
+            color: 'blue',
             alottedTime: 10,
           },
           {
-            text: 'Mow lawn',
+            text: 'You can also select an existing board by clicking "BOARD" in the top header section',
             color: 'green',
             alottedTime: 10,
           },
           {
-            text: 'Paint canvas',
-            color: 'darkblue',
+            text: 'You can edit the board, by clicking "MENU" button that is to the right of the board title',
+            color: 'orange',
             alottedTime: 30,
           },
           {
-            text: 'Add effects',
-            color: 'silver',
+            text: 'Delete a board by also using the "MENU" button to the right of the board title',
+            color: 'red',
             alottedTime: 5,
           },
         ],
       },
       {
-        title: 'Column Two',
+        title: 'columns...',
         tasks: [
           {
             text: 'Task number #1',
@@ -56,7 +56,7 @@ export const guestData: Board[] = [
         ],
       },
       {
-        title: 'Column Three',
+        title: '..and tasks',
         tasks: [
           {
             text: 'Organize desk',
