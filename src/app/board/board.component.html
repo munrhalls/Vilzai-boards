@@ -11,52 +11,6 @@
       *ngFor="let col of board.columns"
     >
       <app-column [col]="col"></app-column>
-      <!-- <header>
-        <h2>
-          {{ col.title }}
-        </h2>
-        <div class="task-add">
-          <div class="task-add-button-container">
-            <button class="task-add-button btn btn-dark">
-              <i class="bi bi-clipboard-plus"></i>
-            </button>
-            <span class="task-add-text">TASK</span>
-          </div>
-
-          <div class="color-select-dropdown dropdown">
-            <button
-              [ngStyle]="{
-                backgroundColor: this.newTaskColor.bg,
-                color: this.newTaskColor.text
-              }"
-              class="btn btn-dark dropdown-toggle container-button-active"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="bi bi-paint-bucket"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li *ngFor="let color of taskColorPairs">
-                <a
-                  [ngStyle]="{ backgroundColor: color.bg, color: color.text }"
-                  class="add-button-board dropdown-item button-active"
-                  (click)="setNewTaskColor(color)"
-                  ><i style="font-size: 1.25rem" class="bi bi-brush"></i>
-                  {{ color.title }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <div class="row" *ngFor="let task of col.tasks">
-        <div class="task-container col-xs-12">
-          <p class="p-3 task" [ngStyle]="{ background: task.color }">
-            {{ task.text }}
-          </p>
-        </div>
-      </div> -->
     </div>
   </div>
 
