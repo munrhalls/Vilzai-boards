@@ -14,18 +14,26 @@ export class BoardEditComponent {
 
   onDragStart(event: any, col: Column) {
     event.dataTransfer.setData('text', this.board!.columns.indexOf(col));
+    event.target.style.cursor = 'move';
   }
   onDragOver(event: any, col: Column) {
     event.preventDefault();
+    event.target.style.borderTop = '5px solid teal';
+  }
+  onDragLeave(event: any) {
+    event.target.style.borderTop = 'none';
   }
   onDrop(event: any, col: Column) {
     event.preventDefault();
     const movedIndex = parseInt(event.dataTransfer.getData('text'));
     const moved = this.board!.columns[movedIndex];
     this.board!.columns.splice(movedIndex, 1);
-    // deleting the dragged el should work on drop
-    const dropLocationIndex = this.board!.columns.indexOf(col);
+    let dropLocationIndex = this.board!.columns.indexOf(col);
+    if (movedIndex === dropLocationIndex) dropLocationIndex++;
     this.board!.columns.splice(dropLocationIndex, 0, moved);
+    event.target.style.cursor = 'auto';
+    event.target.style.borderTop = 'none';
+    debugger;
   }
   handleBoardDisplayModeSet() {
     this.boardDisplayModeSet.emit();

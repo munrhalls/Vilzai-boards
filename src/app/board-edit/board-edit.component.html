@@ -20,6 +20,7 @@
         draggable="true"
         (dragstart)="onDragStart($event, col)"
         (dragover)="onDragOver($event, col)"
+        (dragleave)="onDragLeave($event)"
         (drop)="onDrop($event, col)"
       >
         <header
