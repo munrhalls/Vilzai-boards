@@ -6,10 +6,55 @@
   color: #fff;
 }
 
+/* DRAG  */
+.column-dragged {
+  border-top: 15px solid #000;
+  top: 2rem;
+  opacity: 0.6;
+  cursor: move;
+}
+
+.column-dragenter {
+  background-color: #000;
+}
+
+.draggable {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.draggable:hover {
+  border: 2px solid silver;
+}
+
+.draggable .draggable-text {
+  display: none;
+}
+
+.draggable:hover .draggable-text {
+  display: block;
+}
+
+.draggable-text {
+  color: silver;
+  font-size: 0.75rem;
+}
+.draggable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
 /* COLUMN */
 .columns {
   border: 3px solid #000;
 }
+.column {
+  position: relative;
+}
+
 .column header {
   background-color: #000;
   color: #fff;

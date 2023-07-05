@@ -15,14 +15,17 @@
     </div>
     <div class="columns pb-3 row">
       <div
-        class="column mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
         *ngFor="let col of board.columns; let i = index"
+        class="column draggable mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
         draggable="true"
         (dragstart)="onDragStart($event, col)"
-        (dragover)="onDragOver($event, col)"
+        (dragover)="onDragOver($event)"
+        (dragenter)="onDragEnter($event)"
         (dragleave)="onDragLeave($event)"
         (drop)="onDrop($event, col)"
+        (dragend)="onDragEnd($event)"
       >
+        <div class="draggable-text">Drag to re-order columns</div>
         <header
           class="mt-4 mb-1 d-flex justify-content-centerc align-items-center"
         >
