@@ -1,7 +1,20 @@
 <div *ngIf="board !== null" class="container">
+  <div class="row mt-5 justify-content-center">
+    <div class="col-10 d-flex justify-content-start align-items-center">
+      <button
+        type="submit"
+        class="btn btn-dark button-dark btn-lg"
+        (click)="handleBoardDisplayModeSet()"
+      >
+        <i style="font-size: 1.25rem" class="bi bi-arrow-bar-left"></i>
+        BACK
+      </button>
+    </div>
+  </div>
+
   <form>
     <div
-      class="board-header-edit row d-flex justify-content-center align-items-center"
+      class="row board-header-edit d-flex justify-content-center align-items-center"
     >
       <div class="col-8 col-xs-8 col-md-8">
         <label class="form-label">NAME: </label>
@@ -74,15 +87,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <button
-        type="submit"
-        class="btn btn-dark button-dark btn-lg"
-        (click)="handleBoardDisplayModeSet()"
-      >
-        BACK
-      </button>
     </div>
   </form>
 </div>
