@@ -19,5 +19,22 @@ export class ColumnComponent {
   setNewTaskColor(color: TaskColorPair) {
     this.newTaskColor = color;
   }
-  onNewTaskAdded(task: Task) {}
+  onNewTaskAdded() {
+    console.log(
+      new Task(
+        'Click to edit task..',
+        this.newTaskColor.bg,
+        this.newTaskColor.text,
+        null
+      )
+    );
+    this.col.tasks.unshift(
+      new Task(
+        'New task...',
+        this.newTaskColor.bg,
+        this.newTaskColor.text,
+        null
+      )
+    );
+  }
 }

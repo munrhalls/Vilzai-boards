@@ -3,7 +3,7 @@
     {{ col.title }}
   </h2>
   <div class="task-add">
-    <div class="task-add-button-container">
+    <div class="task-add-button-container" (click)="onNewTaskAdded()">
       <button class="task-add-button btn btn-dark">
         <i class="bi bi-clipboard-plus"></i>
       </button>
@@ -40,7 +40,7 @@
 
 <div class="row" *ngFor="let task of col.tasks">
   <div class="task-container col-xs-12">
-    <p class="p-3 task" [ngStyle]="{ background: task.color }">
+    <p class="p-3 task" [ngStyle]="{ background: task.bg, color: task.color }">
       {{ task.text }}
     </p>
   </div>
