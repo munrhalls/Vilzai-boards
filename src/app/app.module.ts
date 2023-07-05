@@ -20,6 +20,7 @@ import { BoardEditComponent } from './board-edit/board-edit.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BoardAddComponent } from './board/board-add/board-add.component';
 import { BoardHeaderEditComponent } from './board-edit/board-header-edit/board-header-edit.component';
+import { ColumnComponent } from './board/column/column.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BoardHeaderEditComponent } from './board-edit/board-header-edit/board-h
     WelcomeComponent,
     BoardAddComponent,
     BoardHeaderEditComponent,
+    ColumnComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

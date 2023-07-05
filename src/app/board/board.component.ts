@@ -7,11 +7,10 @@ import { Board, TaskColorPair, TaskColorPairs } from '../board.model';
   styleUrls: ['./board.component.css'],
 })
 export class BoardComponent {
-  boardDeletedPrompt: boolean = false;
-  taskColorPairs: TaskColorPair[] = TaskColorPairs;
   @Input() board = {} as Board | null;
   @Output() boardEditModeSet = new EventEmitter<number>();
   @Output() boardDeleted = new EventEmitter<number>();
+  boardDeletedPrompt: boolean = false;
 
   onBoardEditModeSet() {
     this.boardEditModeSet.emit();

@@ -10,7 +10,8 @@
       class="column mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
       *ngFor="let col of board.columns"
     >
-      <header>
+      <app-column [col]="col"></app-column>
+      <!-- <header>
         <h2>
           {{ col.title }}
         </h2>
@@ -24,6 +25,10 @@
 
           <div class="color-select-dropdown dropdown">
             <button
+              [ngStyle]="{
+                backgroundColor: this.newTaskColor.bg,
+                color: this.newTaskColor.text
+              }"
               class="btn btn-dark dropdown-toggle container-button-active"
               type="button"
               data-bs-toggle="dropdown"
@@ -36,6 +41,7 @@
                 <a
                   [ngStyle]="{ backgroundColor: color.bg, color: color.text }"
                   class="add-button-board dropdown-item button-active"
+                  (click)="setNewTaskColor(color)"
                   ><i style="font-size: 1.25rem" class="bi bi-brush"></i>
                   {{ color.title }}
                 </a>
@@ -50,7 +56,7 @@
             {{ task.text }}
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 

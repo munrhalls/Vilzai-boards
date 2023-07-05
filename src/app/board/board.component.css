@@ -2,46 +2,7 @@
 .columns {
   border: 3px solid #000;
 }
-.column header {
-  background-color: #000;
-  color: #fff;
-  border-radius: 3px;
-}
 
-.column header h2 {
-  padding: 0.5rem;
-}
-
-/* TASK ADD */
-.task-add {
-  display: flex;
-  border-top: 3px solid #fff;
-  margin: 1rem 0;
-}
-.task-add-button-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.task-add-button {
-  border-radius: 0;
-  margin-right: 0.75rem;
-  font-size: 1.5rem;
-  background-color: #000;
-  color: #fff;
-}
-.task-add-text {
-  font-weight: bold;
-  margin-right: 0.75rem;
-}
-
-/* TASK */
-.task-container {
-  border-radius: 3px;
-}
-.task {
-  border-radius: 3px;
-}
 /* DELETE BOARD */
 .delete-prompt {
   padding: 1rem;
