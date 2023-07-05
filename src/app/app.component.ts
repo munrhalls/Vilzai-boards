@@ -11,6 +11,7 @@ import { guestData } from './guest.data';
 export class AppComponent implements OnInit {
   title = 'VILZAI BOARDS';
   activeUser: null | User = null;
+  isShowWelcomeAfterLogin: boolean = false;
   boardMode: 'display' | 'edit' | 'add' | 'deleted' = 'display';
   boardSelectHooks: null | BoardSelectHook[] = null;
   guestPeriodicSave: any;
@@ -33,6 +34,8 @@ export class AppComponent implements OnInit {
     this.setBoardSelectHooks();
   }
   onGuestSession() {
+    this.isShowWelcomeAfterLogin = true;
+
     this.activeUser = new User('guest', 0, guestData);
     this.boardSelectHooks = this.activeUser.boards.map((board, index) => {
       return {
@@ -41,6 +44,9 @@ export class AppComponent implements OnInit {
       };
     });
     localStorage.setItem('guest', JSON.stringify(this.activeUser));
+  }
+  onCloseWelcomeAfterLogin() {
+    this.isShowWelcomeAfterLogin = false;
   }
   setBoardSelectHooks() {
     if (this.activeUser !== null) {

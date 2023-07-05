@@ -2,6 +2,7 @@
   *ngIf="activeUser === null"
   style="flex: 1"
   (guestSession)="onGuestSession()"
+  (closeWelcomeAfterLogin)="onCloseWelcomeAfterLogin()"
 ></app-welcome>
 
 <div *ngIf="activeUser !== null">
