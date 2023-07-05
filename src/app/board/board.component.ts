@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Board } from '../board.model';
+import { Board, TaskColorPair, TaskColorPairs } from '../board.model';
 
 @Component({
   selector: 'app-board',
@@ -8,6 +8,7 @@ import { Board } from '../board.model';
 })
 export class BoardComponent {
   boardDeletedPrompt: boolean = false;
+  taskColorPairs: TaskColorPair[] = TaskColorPairs;
   @Input() board = {} as Board | null;
   @Output() boardEditModeSet = new EventEmitter<number>();
   @Output() boardDeleted = new EventEmitter<number>();
