@@ -12,6 +12,28 @@
   padding: 0.5rem;
 }
 
+/* TASK ADD */
+.task-add {
+  display: flex;
+  border-top: 3px solid #fff;
+}
+.task-add-button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.task-add-button {
+  border-radius: 0;
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+}
+.task-add-text {
+  font-weight: bold;
+  margin-right: 0.75rem;
+}
+
 /* TASK */
 .task-container {
   border-radius: 3px;

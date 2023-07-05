@@ -14,6 +14,42 @@
         <h2>
           {{ col.title }}
         </h2>
+        <div class="task-add">
+          <div class="task-add-button-container">
+            <button class="task-add-button btn btn-dark">
+              <i class="bi bi-clipboard-plus"></i>
+            </button>
+            <span class="task-add-text">TASK</span>
+          </div>
+
+          <div class="color-select-dropdown dropdown">
+            <button
+              class="btn btn-dark dropdown-toggle container-button-active"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-paint-bucket"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="add-button-board dropdown-item button-active"
+                  ><i class="bi bi-file-earmark-plus"></i> BLUE
+                </a>
+              </li>
+              <li>
+                <a class="add-button-board dropdown-item button-active"
+                  ><i class="bi bi-file-earmark-plus"></i> GREEN
+                </a>
+              </li>
+              <li>
+                <a class="add-button-board dropdown-item button-active"
+                  ><i class="bi bi-file-earmark-plus"></i> ORANGE
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
       <div class="row" *ngFor="let task of col.tasks">
         <div class="task-container col-xs-12">
