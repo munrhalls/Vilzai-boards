@@ -26,7 +26,7 @@
 }
 
 .draggable:hover {
-  border: 2px solid silver;
+  border: 1px solid silver;
   cursor: move; /* fallback if grab cursor is unsupported */
   cursor: grab;
   cursor: -moz-grab;
@@ -44,6 +44,8 @@
 .draggable-text {
   color: silver;
   font-size: 0.75rem;
+  font-weight: bold;
+  margin-top: 0.25rem;
 }
 .draggable:active {
   cursor: grabbing;
@@ -51,6 +53,9 @@
   cursor: -webkit-grabbing;
 }
 
+.columns {
+  padding: 1rem;
+}
 /* COLUMN */
 .columns {
   border: 3px solid #000;
