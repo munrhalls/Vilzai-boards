@@ -1,5 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { Column, TaskColorPair, TaskColorPairs } from 'src/app/board.model';
+import {
+  Column,
+  TaskColorPair,
+  TaskColorPairs,
+  Task,
+} from 'src/app/board.model';
 
 @Component({
   selector: 'app-column',
@@ -10,7 +15,9 @@ export class ColumnComponent {
   @Input() col = {} as Column;
   taskColorPairs: TaskColorPair[] = TaskColorPairs;
   newTaskColor: TaskColorPair = this.taskColorPairs[0];
+
   setNewTaskColor(color: TaskColorPair) {
     this.newTaskColor = color;
   }
+  onNewTaskAdded(task: Task) {}
 }

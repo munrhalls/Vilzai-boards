@@ -62,9 +62,9 @@ export class BoardEditComponent {
       i,
       0,
       new Column('New column title...', [
-        new Task('Example new task 1..', 'silver', null),
-        new Task('Example new task 2..', 'green', null),
-        new Task('Example new task 3..', 'blue', null),
+        new Task('Example new task 1..', 'silver', '#fff', null),
+        new Task('Example new task 2..', 'green', '#fff', null),
+        new Task('Example new task 3..', 'blue', '#fff', null),
       ])
     );
   }

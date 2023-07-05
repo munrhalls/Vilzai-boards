@@ -1,6 +1,7 @@
 export class Task {
   constructor(
     public text: string,
+    public bg: string,
     public color: string,
     public alottedTime: null | number
   ) {}

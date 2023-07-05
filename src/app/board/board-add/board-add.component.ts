@@ -37,9 +37,9 @@ export class BoardAddComponent implements OnInit {
       columns: this.columnTitles.map(
         (colTitle, index) =>
           new Column(colTitle, [
-            new Task('Example task 1...', 'silver', null),
-            new Task('Example task 2...', 'blue', null),
-            new Task('Example task 3...', 'green', null),
+            new Task('Example task 1...', 'silver', '#000', null),
+            new Task('Example task 2...', 'blue', '#fff', null),
+            new Task('Example task 3...', 'green', '#fff', null),
           ])
       ),
     });
