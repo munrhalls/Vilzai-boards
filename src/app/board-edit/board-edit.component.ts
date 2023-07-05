@@ -38,10 +38,6 @@ export class BoardEditComponent {
     let dropLocationIndex = this.board!.columns.indexOf(col);
     if (movedIndex === dropLocationIndex) dropLocationIndex++;
     this.board!.columns.splice(dropLocationIndex, 0, moved);
-    this.dragged.style.cursor = 'auto';
-    this.dragged.style.borderTop = 'none';
-    this.dragged.style.opacity = '1';
-    this.dragged.style.top = '0';
   }
   onDragEnd(event: any) {
     event.preventDefault();
