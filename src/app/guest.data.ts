@@ -89,8 +89,8 @@ export const guestData: Board[] = [
         title: 'Enjoy using simple, no-nonsense task boards.',
         tasks: [
           {
-            text: 'Feel free to delete this welcome board using "MENU" button to the right of board title and make your own',
-            color: 'darkorange',
+            text: 'Feel free to delete this welcome board using "MENU" dropdown to the right of board title and make your own',
+            color: 'red',
             alottedTime: 10,
           },
           {
