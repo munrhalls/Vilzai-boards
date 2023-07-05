@@ -16,7 +16,7 @@
     <div class="columns pb-3 row">
       <div
         *ngFor="let col of board.columns; let i = index"
-        class="column draggable mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
+        class="column draggable mt-3 col-12 col-xs-12 col-sm-5 col-md-4 col-lg-3 col-xl-2"
         draggable="true"
         (dragstart)="onDragStart($event, col)"
         (dragover)="onDragOver($event)"

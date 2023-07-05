@@ -69,10 +69,13 @@
 }
 .column {
   position: relative;
+  margin-right: 2rem;
 }
 @media screen and (max-width: 576px) {
   .column {
     margin-bottom: 5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .dashed-border {
