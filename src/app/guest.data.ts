@@ -9,22 +9,22 @@ export const guestData: Board[] = [
         title: 'This app gives you boards..',
         tasks: [
           {
-            text: 'You can create a new board by clicking "BOARD" in the top header section',
+            text: 'You can CREATE a new board by clicking "BOARD" in the top header section',
             color: 'blue',
             alottedTime: 10,
           },
           {
-            text: 'You can also select an existing board by clicking "BOARD" in the top header section',
+            text: 'You can also SELECT an existing board by clicking "BOARD" dropdown in the top header section',
             color: 'green',
             alottedTime: 10,
           },
           {
-            text: 'You can edit the board, by clicking "MENU" button that is to the right of the board title',
+            text: 'You can EDIT the board, by clicking "MENU" button that is to the right of the board title',
             color: 'orange',
             alottedTime: 30,
           },
           {
-            text: 'Delete a board by also using the "MENU" button to the right of the board title',
+            text: 'DELETE a board by also using the "MENU" button to the right of the board title',
             color: 'red',
             alottedTime: 5,
           },
@@ -34,17 +34,17 @@ export const guestData: Board[] = [
         title: 'This app gives you columns.....',
         tasks: [
           {
-            text: 'You can easily re-order and move around columns using drag & drop',
+            text: 'You can easily re-order and move around columns using DRAG & DROP',
             color: 'orange',
             alottedTime: 10,
           },
           {
-            text: 'To use drag & drop on columns, click edit in the "MENU" to the right of the board title',
+            text: 'To use drag & drop on columns, click edit in the "MENU" dropdown to the right of the board title and press "EDIT"',
             color: 'green',
             alottedTime: 10,
           },
           {
-            text: 'This enables editing in an extremely simple, handy way ',
+            text: 'This triggers editing mode, which happens to be extremely simple and handy ',
             color: 'yellow',
             alottedTime: 30,
           },
@@ -66,11 +66,16 @@ export const guestData: Board[] = [
         ],
       },
       {
-        title: 'This app gives you tasks...',
+        title: 'This app only takes your tasks...',
         tasks: [
           {
             text: 'Add, mark as done or delete tasks, using the menu buttons at the top of a column',
-            color: 'silver',
+            color: 'gray',
+            alottedTime: 10,
+          },
+          {
+            text: 'Use DRAG & DROP to change order of tasks',
+            color: 'blue',
             alottedTime: 10,
           },
           {
@@ -86,7 +91,7 @@ export const guestData: Board[] = [
         ],
       },
       {
-        title: 'Enjoy using simple, no-nonsense task boards.',
+        title: 'Enjoy using simple, no-nonsense task boards',
         tasks: [
           {
             text: 'Feel free to delete this welcome board using "MENU" dropdown to the right of board title and make your own',
