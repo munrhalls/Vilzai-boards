@@ -7,10 +7,11 @@
 }
 
 /* DRAG  */
-.drag-and-drop-header {
+.ui-info-header {
   color: silver;
+  margin-top: 0.5rem;
 }
-.drag-and-drop-header i {
+.ui-info-header i {
   margin-right: 0.75rem;
 }
 .column-dragged {
