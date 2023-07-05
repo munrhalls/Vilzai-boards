@@ -33,7 +33,6 @@ export class BoardEditComponent {
     this.board!.columns.splice(dropLocationIndex, 0, moved);
     event.target.style.cursor = 'auto';
     event.target.style.borderTop = 'none';
-    debugger;
   }
   handleBoardDisplayModeSet() {
     this.boardDisplayModeSet.emit();
