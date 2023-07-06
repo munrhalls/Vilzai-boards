@@ -14,6 +14,7 @@ export class BoardEditComponent {
   dragged: any;
   dragEnterEl: any;
 
+  // DRAG & DROP
   onDragStart(event: any, col: Column) {
     event.dataTransfer.setData('text', this.board!.columns.indexOf(col));
     this.dragged = event.target;

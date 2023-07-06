@@ -38,7 +38,17 @@
   </div>
 </header>
 
-<div class="row" *ngFor="let task of col.tasks; let taskIndex = index">
+<div
+  draggable="true"
+  (dragstart)="onDragStart($event, task)"
+  (dragover)="onDragOver($event)"
+  (dragenter)="onDragEnter($event)"
+  (dragleave)="onDragLeave($event)"
+  (drop)="onDrop($event, col)"
+  (dragend)="onDragEnd($event)"
+  class="row draggable task-row"
+  *ngFor="let task of col.tasks; let taskIndex = index"
+>
   <div class="col-xs-12">
     <div
       class="task-container d-flex justify-content-center align-items-center"
@@ -46,6 +56,7 @@
       <div
         *ngIf="editTaskIndex !== taskIndex"
         class="p-3 task"
+        draggable
         [ngStyle]="{ background: task.bg, color: task.color }"
       >
         <div class="checkbox-container">
