@@ -21,6 +21,9 @@ header h2 {
 .task-done {
   text-decoration: line-through;
 }
+.task-text {
+  cursor: alias;
+}
 .checkbox-container {
   float: right;
   width: 2.25rem;
