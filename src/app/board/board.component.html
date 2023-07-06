@@ -13,6 +13,7 @@
       <app-column
         [col]="col"
         (dragStart)="onTaskDragStart($event, colIndex)"
+        (dragDrop)="onTaskDrop($event)"
       ></app-column>
     </div>
   </div>

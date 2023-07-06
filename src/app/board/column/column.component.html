@@ -44,7 +44,7 @@
   (dragover)="onDragOver($event)"
   (dragenter)="onDragEnter($event)"
   (dragleave)="onDragLeave($event)"
-  (drop)="onDrop($event, col)"
+  (drop)="onDrop($event, taskIndex)"
   (dragend)="onDragEnd($event)"
   class="row draggable task-row"
   *ngFor="let task of col.tasks; let taskIndex = index"
