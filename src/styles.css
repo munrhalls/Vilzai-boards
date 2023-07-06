@@ -126,11 +126,13 @@ textarea {
   line-height: 1.5;
   font-size: 13px;
   font-family: Arial;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
   overflow: auto;
-
+  word-wrap: break-word;
+  resize: vertical;
   background-color: #fff;
   padding: 0.5rem;
   font-size: 1rem;
