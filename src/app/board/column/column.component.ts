@@ -39,7 +39,7 @@ export class ColumnComponent {
       )
     );
   }
-  selectTask() {
-    console.log('select');
+  selectTask(column: Column, taskIndex: number) {
+    console.log(column, taskIndex);
   }
 }
