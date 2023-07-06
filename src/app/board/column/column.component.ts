@@ -51,7 +51,6 @@ export class ColumnComponent {
     this.col.tasks.splice(taskIndex, 1);
   }
   // DRAG & DROP
-
   onDragStart(task: Task) {
     console.log('start');
     this.dragStart.emit(task);
@@ -69,6 +68,5 @@ export class ColumnComponent {
   }
   onDragEnd(event: any) {
     event.preventDefault();
-    // this.dragged.classList.remove('column-dragged');
   }
 }

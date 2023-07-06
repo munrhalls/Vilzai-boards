@@ -131,3 +131,9 @@
     </div>
   </div>
 </div>
+
+<div
+  *ngIf="col.tasks.length === 0"
+  (drop)="onDrop($event, 0)"
+  style="height: 100%"
+></div>

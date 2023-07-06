@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Board, Task, TaskColorPair, TaskColorPairs } from '../board.model';
+import { Board, Task } from '../board.model';
 
 @Component({
   selector: 'app-board',
@@ -14,15 +14,12 @@ export class BoardComponent {
   draggedTask: { fromColIndex: number; task: Task } | null = null;
 
   onTaskDragStart(moved: Task, fromColIndex: number) {
-    console.log(moved);
-    console.log(fromColIndex);
     this.draggedTask = {
       fromColIndex: fromColIndex,
       task: moved,
     };
   }
   onTaskDrop(taskDroppedAtIndex: number, colDroppedAtIndex: number) {
-    console.log(taskDroppedAtIndex, colDroppedAtIndex);
     const columnFrom = this.board!.columns[this.draggedTask!.fromColIndex];
     columnFrom.tasks.splice(
       columnFrom.tasks.indexOf(this.draggedTask!.task),
@@ -30,8 +27,12 @@ export class BoardComponent {
     );
 
     const columnTo = this.board!.columns[colDroppedAtIndex];
-    columnTo.tasks.splice(taskDroppedAtIndex, 0, this.draggedTask!.task);
-    console.log(columnTo.tasks);
+    if (columnTo.tasks.length > 0) {
+      columnTo.tasks.splice(taskDroppedAtIndex, 0, this.draggedTask!.task);
+    } else {
+      columnTo.tasks.push(this.draggedTask!.task);
+    }
+
     this.draggedTask = null;
   }
   onBoardEditModeSet() {
