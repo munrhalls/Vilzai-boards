@@ -21,13 +21,22 @@ header h2 {
 .task-done {
   text-decoration: line-through;
 }
+.checkbox-container {
+  float: right;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .task-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background: #fff;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
   position: relative;
   border: 0.07rem solid darkslategray;
   border-radius: 0.2rem;
@@ -45,7 +54,7 @@ header h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .custom-checkbox::before {
