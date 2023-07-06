@@ -2,6 +2,7 @@
   <div class="row mt-5 justify-content-center">
     <div class="col-10 d-flex justify-content-start align-items-center">
       <button
+        [disabled]="board.title.length > 100 || board.columns.length > 15"
         type="submit"
         class="btn btn-dark button-dark btn-lg"
         (click)="handleBoardDisplayModeSet()"
@@ -12,18 +13,34 @@
     </div>
   </div>
 
+  <div
+    *ngIf="board.title.length >= 60"
+    class="mt-2 mb-2 alert alert-danger"
+    role="alert"
+  >
+    Board title cannot be longer than 60 characters.
+  </div>
+  <div
+    *ngIf="board.columns.length >= 15"
+    class="mt-2 mb-2 alert alert-danger"
+    role="alert"
+  >
+    Board has maximum 16 columns. Please delete columns to keep total count at
+    16 maximum.
+  </div>
+
   <form>
     <div
       class="row board-header-edit d-flex justify-content-center align-items-center"
     >
-      <div class="col-8 col-xs-8 col-md-8">
+      <div class="col-10 col-xs-12 col-md-8">
         <label class="form-label">NAME: </label>
-        <input
+        <textarea
           class="form-control"
           type="text"
           name="title"
           [(ngModel)]="board.title"
-        />
+        ></textarea>
       </div>
     </div>
     <div class="columns pb-3 row">
