@@ -38,6 +38,12 @@
   </div>
 </header>
 
+<div *ngIf="col.tasks.length > 32" class="row">
+  <div class="mt-4 mb-2 alert alert-danger" role="alert">
+    Column cannot have more than 32 tasks.
+  </div>
+</div>
+
 <div
   draggable="true"
   (dragstart)="onDragStart(task)"
