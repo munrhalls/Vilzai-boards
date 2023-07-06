@@ -38,10 +38,26 @@
   </div>
 </header>
 
-<div class="row" *ngFor="let task of col.tasks">
-  <div class="task-container col-xs-12">
-    <p class="p-3 task" [ngStyle]="{ background: task.bg, color: task.color }">
-      {{ task.text }}
-    </p>
+<div class="row" *ngFor="let task of col.tasks; let taskIndex = index">
+  <div class="col-xs-12">
+    <div
+      class="task-container d-flex justify-content-center align-items-center"
+    >
+      <p
+        class="p-3 task d-flex justify-content-between align-items-center"
+        [ngStyle]="{ background: task.bg, color: task.color }"
+        (mouseup)="selectTask()"
+      >
+        <span class="task-text">
+          {{ task.text }}
+        </span>
+
+        <input
+          class="task-checkbox form-check-input"
+          type="checkbox"
+          value=""
+        />
+      </p>
+    </div>
   </div>
 </div>

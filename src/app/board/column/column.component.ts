@@ -37,4 +37,7 @@ export class ColumnComponent {
       )
     );
   }
+  selectTask() {
+    console.log('select');
+  }
 }

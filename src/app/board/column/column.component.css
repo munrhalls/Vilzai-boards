@@ -11,9 +11,14 @@ header h2 {
 /* TASK */
 .task-container {
   border-radius: 3px;
+  padding: 0.5rem 0;
 }
 .task {
   border-radius: 3px;
+  margin: 0;
+  width: 100%;
+}
+.task-checkbox {
 }
 
 /* TASK ADD */
