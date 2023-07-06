@@ -1,5 +1,11 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Board, Column, Task } from 'src/app/board.model';
+import {
+  Board,
+  Column,
+  Task,
+  TaskColorPair,
+  TaskColorPairs,
+} from 'src/app/board.model';
 
 @Component({
   selector: 'app-board-add',
@@ -18,6 +24,8 @@ export class BoardAddComponent implements OnInit {
     'Column 4 title...',
     'Column 5 title...',
   ];
+  taskColorPairs: TaskColorPair[] = TaskColorPairs;
+
   @Output() boardAdded = new EventEmitter<Board>();
   updateColumnTitle(event: Event, i: number) {
     this.columnTitles[i] = (<HTMLInputElement>event.target).value;
@@ -37,9 +45,27 @@ export class BoardAddComponent implements OnInit {
       columns: this.columnTitles.map(
         (colTitle, index) =>
           new Column(colTitle, [
-            new Task('New task 1...', 'silver', '#000', false, null),
-            new Task('New task 2...', 'green', '#000', false, null),
-            new Task('New task 3...', 'blue', '#000', false, null),
+            new Task(
+              'New task 1...',
+              this.taskColorPairs[0].bg,
+              this.taskColorPairs[0].text,
+              false,
+              null
+            ),
+            new Task(
+              'New task 2...',
+              this.taskColorPairs[1].bg,
+              this.taskColorPairs[1].text,
+              false,
+              null
+            ),
+            new Task(
+              'New task 3...',
+              this.taskColorPairs[2].bg,
+              this.taskColorPairs[2].text,
+              false,
+              null
+            ),
           ])
       ),
     });
