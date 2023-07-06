@@ -14,12 +14,23 @@ app-root {
 app-root > div {
   height: 100%;
 }
+app-board {
+  display: block;
+  min-height: 100%;
+}
 
 app-board-add {
   height: 100%;
   display: block;
 }
 
+/* TYPOGRAPHY  */
+h1 {
+  font-size: calc(1.25rem + 1.5vw);
+}
+h2 {
+  font-size: calc(1rem + 0.9vw);
+}
 /* HEADERS */
 .container-header {
   background-color: #000;

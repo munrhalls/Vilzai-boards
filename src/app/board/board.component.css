@@ -1,6 +1,8 @@
 /* COLUMN */
 .columns {
   border: 3px solid #000;
+  overflow: scroll;
+  min-height: 100%;
 }
 
 /* DELETE BOARD */
