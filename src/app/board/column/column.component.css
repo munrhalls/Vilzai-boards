@@ -26,11 +26,11 @@ header h2 {
   -moz-appearance: none;
   appearance: none;
   background: #fff;
-  width: 20px;
-  height: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
   position: relative;
-  border: 1px solid darkslategray;
-  border-radius: 3px;
+  border: 0.07rem solid darkslategray;
+  border-radius: 0.2rem;
   cursor: pointer;
 }
 
@@ -45,8 +45,9 @@ header h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 15px;
+  font-size: 1rem;
 }
+
 .custom-checkbox::before {
   content: "";
   display: inline-block;
