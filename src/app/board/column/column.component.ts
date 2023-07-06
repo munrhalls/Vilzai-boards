@@ -14,7 +14,7 @@ import {
 export class ColumnComponent {
   @Input() col = {} as Column;
   @Output() dragStart = new EventEmitter<Task>();
-  @Output() dragDrop = new EventEmitter<{ taskDroppedAtIndex: number }>();
+  @Output() dragDrop = new EventEmitter<number>();
 
   taskColorPairs: TaskColorPair[] = TaskColorPairs;
   newTaskColor: TaskColorPair = this.taskColorPairs[0];
@@ -65,7 +65,7 @@ export class ColumnComponent {
   onDragLeave(event: any) {}
   onDrop(event: any, taskDroppedAtIndex: number) {
     event.preventDefault();
-    this.dragDrop.emit({ taskDroppedAtIndex: taskDroppedAtIndex });
+    this.dragDrop.emit(taskDroppedAtIndex);
   }
   onDragEnd(event: any) {
     event.preventDefault();

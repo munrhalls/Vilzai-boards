@@ -21,8 +21,8 @@ export class BoardComponent {
       task: moved,
     };
   }
-  onTaskDrop(taskDroppedAtIndex: { taskDroppedAtIndex: number }) {
-    console.log(taskDroppedAtIndex);
+  onTaskDrop(taskDroppedAtIndex: number, colDroppedAtIndex: number) {
+    console.log(taskDroppedAtIndex, colDroppedAtIndex);
     // droppedAtColIndex: number,
     // get col and splice it in its tasks @index
     // const columnFrom = this.board!.columns[this.draggedTask!.fromColIndex];
