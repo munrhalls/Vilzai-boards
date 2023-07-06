@@ -48,7 +48,7 @@
         [ngStyle]="{ background: task.bg, color: task.color }"
         (mouseup)="selectTask()"
       >
-        <span class="task-text">
+        <span [ngClass]="{ 'task-done': task.done }" class="task-text">
           {{ task.text }}
         </span>
 

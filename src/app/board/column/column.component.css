@@ -18,6 +18,9 @@ header h2 {
   margin: 0;
   width: 100%;
 }
+.task-done {
+  text-decoration: line-through;
+}
 .task-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
