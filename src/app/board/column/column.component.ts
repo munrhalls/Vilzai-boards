@@ -13,7 +13,7 @@ import {
 })
 export class ColumnComponent {
   @Input() col = {} as Column;
-  @Output() taskDragged = new EventEmitter<number>();
+  @Output() dragStart = new EventEmitter<Task>();
   taskColorPairs: TaskColorPair[] = TaskColorPairs;
   newTaskColor: TaskColorPair = this.taskColorPairs[0];
   editTaskIndex: number | null = null;
@@ -50,9 +50,9 @@ export class ColumnComponent {
   }
   // DRAG & DROP
 
-  onDragStart(event: any, task: Task) {
+  onDragStart(task: Task) {
     console.log('start');
-    event.dataTransfer.setData('text/plain', task);
+    this.dragStart.emit(task);
     // // this.col.tasks.splice(this.col.tasks.indexOf(task), 1);
     // let el = event.target;
     // for (let i = 0; i < 5; i++) {
