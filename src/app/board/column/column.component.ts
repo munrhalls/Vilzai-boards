@@ -25,6 +25,7 @@ export class ColumnComponent {
         'Click to edit task..',
         this.newTaskColor.bg,
         this.newTaskColor.text,
+        false,
         null
       )
     );
@@ -33,6 +34,7 @@ export class ColumnComponent {
         'New task...',
         this.newTaskColor.bg,
         this.newTaskColor.text,
+        false,
         null
       )
     );

@@ -43,28 +43,15 @@ export class BoardEditComponent {
     event.preventDefault();
     this.dragged.classList.remove('column-dragged');
   }
-  // export class Column {
-  //   constructor(
-  //     public title: string,
-  //     public tasks: Task[],
-  //   ) {}
-  // }
-  // export class Task {
-  //   constructor(
-  //     public text: string,
-  //     public color: string,
-  //     public alottedTime: null | number
-  //   ) {}
-  // }
 
   addColumnAtIndex(i: number) {
     this.board!.columns.splice(
       i,
       0,
       new Column('New column title...', [
-        new Task('Example new task 1..', 'silver', '#fff', null),
-        new Task('Example new task 2..', 'green', '#fff', null),
-        new Task('Example new task 3..', 'blue', '#fff', null),
+        new Task('Example new task 1..', 'silver', '#fff', false, null),
+        new Task('Example new task 2..', 'green', '#fff', false, null),
+        new Task('Example new task 3..', 'blue', '#fff', false, null),
       ])
     );
   }

@@ -3,6 +3,7 @@ export class Task {
     public text: string,
     public bg: string,
     public color: string,
+    public done: boolean,
     public alottedTime: null | number
   ) {}
 }
