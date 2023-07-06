@@ -23,18 +23,16 @@ export class BoardComponent {
   }
   onTaskDrop(taskDroppedAtIndex: number, colDroppedAtIndex: number) {
     console.log(taskDroppedAtIndex, colDroppedAtIndex);
-    // droppedAtColIndex: number,
-    // get col and splice it in its tasks @index
-    // const columnFrom = this.board!.columns[this.draggedTask!.fromColIndex];
-    // columnFrom.tasks.splice(
-    //   columnFrom.tasks.indexOf(this.draggedTask!.task),
-    //   1
-    // );
+    const columnFrom = this.board!.columns[this.draggedTask!.fromColIndex];
+    columnFrom.tasks.splice(
+      columnFrom.tasks.indexOf(this.draggedTask!.task),
+      1
+    );
 
-    // const columnTo = this.board!.columns[droppedAtColIndex];
-    // columnTo.tasks.splice(droppedOnTaskIndex, 0, this.draggedTask!.task);
-    // console.log(columnTo.tasks);
-    // this.draggedTask = null;
+    const columnTo = this.board!.columns[colDroppedAtIndex];
+    columnTo.tasks.splice(taskDroppedAtIndex, 0, this.draggedTask!.task);
+    console.log(columnTo.tasks);
+    this.draggedTask = null;
   }
   onBoardEditModeSet() {
     this.boardEditModeSet.emit();
