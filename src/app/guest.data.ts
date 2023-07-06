@@ -96,7 +96,14 @@ export const guestData: Board[] = [
         title: 'This app only takes your tasks...',
         tasks: [
           {
-            text: 'Add, mark as done or delete tasks, using the menu buttons at the top of a column',
+            text: 'Add new task using + button at the top',
+            bg: TaskColorPairs[2].bg,
+            color: TaskColorPairs[2].text,
+            done: false,
+            alottedTime: 10,
+          },
+          {
+            text: 'Mark as done using checkbox',
             bg: TaskColorPairs[2].bg,
             color: TaskColorPairs[2].text,
             done: false,
@@ -131,15 +138,14 @@ export const guestData: Board[] = [
             alottedTime: 30,
           },
           {
-            text: 'You can click it and it will set default color for any new task you add',
+            text: 'You can click it and it will set default new task color in that column',
             bg: TaskColorPairs[7].bg,
             color: TaskColorPairs[7].text,
             done: false,
             alottedTime: 30,
           },
-
           {
-            text: 'For any task',
+            text: 'So you can easily add many tasks of a select color in a specific column',
             bg: TaskColorPairs[8].bg,
             color: TaskColorPairs[8].text,
             done: false,
