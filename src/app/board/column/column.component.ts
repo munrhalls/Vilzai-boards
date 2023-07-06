@@ -15,6 +15,7 @@ export class ColumnComponent {
   @Input() col = {} as Column;
   taskColorPairs: TaskColorPair[] = TaskColorPairs;
   newTaskColor: TaskColorPair = this.taskColorPairs[0];
+  editTaskIndex: number | null = null;
 
   setNewTaskColor(color: TaskColorPair) {
     this.newTaskColor = color;
@@ -39,7 +40,11 @@ export class ColumnComponent {
       )
     );
   }
-  selectTask(column: Column, taskIndex: number) {
-    console.log(column, taskIndex);
+  setTaskEdit(column: Column, taskIndex: number) {
+    this.editTaskIndex = taskIndex;
+  }
+  deleteTask(taskIndex: number) {
+    this.col.tasks.splice(taskIndex, 1);
+    this.editTaskIndex = null;
   }
 }

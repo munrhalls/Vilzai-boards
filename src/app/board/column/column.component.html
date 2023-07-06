@@ -44,6 +44,7 @@
       class="task-container d-flex justify-content-center align-items-center"
     >
       <div
+        *ngIf="editTaskIndex !== taskIndex"
         class="p-3 task"
         [ngStyle]="{ background: task.bg, color: task.color }"
       >
@@ -57,10 +58,63 @@
         <span
           [ngClass]="{ 'task-done': task.done }"
           class="task-text"
-          (mouseup)="selectTask(col, taskIndex)"
+          (mouseup)="setTaskEdit(col, taskIndex)"
         >
           {{ task.text }}
         </span>
+      </div>
+
+      <div
+        *ngIf="editTaskIndex === taskIndex"
+        class="p-3 task task-edit"
+        [ngStyle]="{ background: task.bg, color: task.color }"
+      >
+        <div class="task-color-edit">
+          <div class="color-select-dropdown dropdown">
+            <button
+              [ngStyle]="{
+                backgroundColor: task.bg,
+                color: task.color,
+                borderColor: task.color
+              }"
+              class="btn btn-dark dropdown-toggle container-button-active"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-paint-bucket"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li *ngFor="let color of taskColorPairs">
+                <a
+                  [ngStyle]="{ backgroundColor: color.bg, color: color.text }"
+                  class="add-button-board dropdown-item button-active"
+                  (click)="task.bg = color.bg; task.color = color.text"
+                  ><i style="font-size: 1.25rem" class="bi bi-brush"></i>
+                  {{ color.title }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <textarea
+          class="task-text-edit"
+          [ngClass]="{ 'task-done': task.done }"
+          name="taskIndex"
+          [(ngModel)]="task.text"
+        ></textarea>
+
+        <div
+          class="task-edit-save-and-delete d-flex justify-content-evenly align-items-center"
+        >
+          <button class="btn btn-light" (click)="editTaskIndex = null">
+            SAVE
+          </button>
+          <button class="btn btn-danger" (click)="deleteTask(taskIndex)">
+            DELETE
+          </button>
+        </div>
       </div>
     </div>
   </div>

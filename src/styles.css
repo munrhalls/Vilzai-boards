@@ -114,3 +114,24 @@ form button {
   font-size: 0.75rem;
   margin-top: 0.5rem;
 }
+
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  font-size: 13px;
+  font-family: Arial;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  overflow: auto;
+
+  background-color: #fff;
+  padding: 0.5rem;
+  font-size: 1rem;
+}

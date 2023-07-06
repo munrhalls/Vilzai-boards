@@ -22,8 +22,9 @@ header h2 {
   text-decoration: line-through;
 }
 .task-text {
-  cursor: alias;
+  cursor: pointer;
 }
+
 .checkbox-container {
   float: right;
   width: 2.25rem;
@@ -111,4 +112,27 @@ header h2 {
 .task-add-text {
   font-weight: bold;
   margin-right: 0.75rem;
+}
+
+/* TASK EDIT */
+
+.task-color-edit button {
+  border: 3px solid #000;
+  border-radius: 3px;
+  width: 8rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+.task-text-edit {
+  border-radius: 3px;
+  outline: none;
+  margin-top: 1rem;
+  height: 8rem;
+}
+.task-edit-save-and-delete {
+  margin-top: 1rem;
+}
+
+.task-edit-save-and-delete button {
+  font-weight: bold;
 }
