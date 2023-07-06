@@ -33,7 +33,7 @@ export const TaskColorPairs = [
   { title: 'gray', bg: '#505050', text: '#fff' },
   { title: 'blue', bg: '#0101dd', text: '#ccc' },
   { title: 'green', bg: '#008e00', text: '#fff' },
-  { title: 'yellow', bg: 'yellow', text: '#000' },
+  { title: 'yellow', bg: '#e2e21b', text: '#300b0b' },
   { title: 'orange', bg: '#fea403', text: '#000' },
   { title: 'red', bg: 'red', text: '#000' },
   { title: 'violet', bg: 'violet', text: '#000' },

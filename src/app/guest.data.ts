@@ -124,12 +124,20 @@ export const guestData: Board[] = [
             alottedTime: 30,
           },
           {
-            text: 'You can choose whatever color you like',
+            text: 'Notice the paint bucket icon at the top of a column',
+            bg: TaskColorPairs[4].bg,
+            color: TaskColorPairs[4].text,
+            done: false,
+            alottedTime: 30,
+          },
+          {
+            text: 'You can click it and it will set default color for any new task you add',
             bg: TaskColorPairs[7].bg,
             color: TaskColorPairs[7].text,
             done: false,
             alottedTime: 30,
           },
+
           {
             text: 'For any task',
             bg: TaskColorPairs[8].bg,
