@@ -41,6 +41,12 @@
           or&nbsp;delete&nbsp;a&nbsp;column.</span
         >
       </div>
+      <div *ngIf="board.columns.length === 0">
+        <button class="btn btn-success" (click)="addColumnAtIndex(0)">
+          <i style="font-size: 1.5rem" class="bi bi-clipboard-plus"></i>
+          ADD COLUMN
+        </button>
+      </div>
       <div
         *ngFor="let col of board.columns; let i = index"
         class="column draggable mt-3 col-12 col-xs-12 col-sm-5 col-md-4 col-lg-3 col-xl-2"
