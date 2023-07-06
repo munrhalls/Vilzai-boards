@@ -166,6 +166,13 @@ export const guestData: Board[] = [
             alottedTime: 30,
           },
           {
+            text: 'Simple, useful, no-nonsense board with task columns!',
+            bg: TaskColorPairs[8].bg,
+            color: TaskColorPairs[8].text,
+            done: false,
+            alottedTime: 30,
+          },
+          {
             text: 'So you can easily add many tasks of that color',
             bg: TaskColorPairs[8].bg,
             color: TaskColorPairs[8].text,
