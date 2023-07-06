@@ -3,8 +3,12 @@
     {{ col.title }}
   </h2>
   <div class="task-add">
-    <div class="task-add-button-container" (click)="onNewTaskAdded()">
-      <button class="task-add-button btn btn-dark">
+    <div class="task-add-button-container">
+      <button
+        [disabled]="col.tasks.length > 16"
+        (click)="onNewTaskAdded()"
+        class="task-add-button btn btn-dark"
+      >
         <i class="bi bi-clipboard-plus"></i>
       </button>
       <span class="task-add-text">TASK</span>
@@ -38,9 +42,9 @@
   </div>
 </header>
 
-<div *ngIf="col.tasks.length > 32" class="row">
+<div *ngIf="col.tasks.length > 16" class="row">
   <div class="mt-4 mb-2 alert alert-danger" role="alert">
-    Column cannot have more than 32 tasks.
+    Column cannot have more than 16 tasks.
   </div>
 </div>
 
