@@ -55,13 +55,13 @@
             [(ngModel)]="task.done"
           />
         </div>
-        <span
+        <div
           [ngClass]="{ 'task-done': task.done }"
           class="task-text"
           (mouseup)="setTaskEdit(col, taskIndex)"
         >
           {{ task.text }}
-        </span>
+        </div>
       </div>
 
       <div
