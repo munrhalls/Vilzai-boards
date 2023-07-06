@@ -4,3 +4,9 @@
   padding: 1rem;
   color: #fff;
 }
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: calc(1.25rem + 1.5vw);
+  }
+}
