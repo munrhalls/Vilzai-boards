@@ -11,19 +11,27 @@ export class BoardComponent {
   @Output() boardEditModeSet = new EventEmitter<number>();
   @Output() boardDeleted = new EventEmitter<number>();
   boardDeletedPrompt: boolean = false;
-  // draggedTask: { colIndex: number; dragged: Task } | null = null;
-  // onTaskDragStart - set dragged{moved: task, colMovedFrom: }
-  // onTaskDrop - get {droppedOnTaskIndex.., ...droppedAtColIndex..
-  // 1. splice out from colMovedFrom using colMovedFrom data -> col and moved index of
-  // 2. splice in to columns[droppedAtColIndex], @droppedOnTaskIndex
+  draggedTask: { fromColIndex: number; task: Task } | null = null;
 
   onTaskDragStart(moved: Task, fromColIndex: number) {
     console.log(moved);
     console.log(fromColIndex);
-    // pass task and colindex here, set it to dragged
+    this.draggedTask = {
+      fromColIndex: fromColIndex,
+      task: moved,
+    };
   }
   onTaskDrop(droppedAtColIndex: number, droppedOnTaskIndex: number) {
     // get col and splice it in its tasks @index
+    const columnFrom = this.board!.columns[this.draggedTask!.fromColIndex];
+    columnFrom.tasks.splice(
+      columnFrom.tasks.indexOf(this.draggedTask!.task),
+      1
+    );
+
+    const columnTo = this.board!.columns[droppedAtColIndex];
+    columnTo.tasks.splice(droppedOnTaskIndex, 0, this.draggedTask!.task);
+    this.draggedTask = null;
   }
   onBoardEditModeSet() {
     this.boardEditModeSet.emit();
