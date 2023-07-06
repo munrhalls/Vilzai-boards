@@ -19,6 +19,8 @@ header h2 {
   width: 100%;
 }
 .task-checkbox {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 /* TASK ADD */
