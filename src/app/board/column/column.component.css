@@ -19,8 +19,59 @@ header h2 {
   width: 100%;
 }
 .task-checkbox {
-  height: 1.5rem;
-  width: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: 1px solid darkslategray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.task-checkbox:checked {
+  background: #000;
+}
+
+.task-checkbox:checked:after {
+  content: "\2713";
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+.custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  vertical-align: -0.25em;
+}
+
+.custom-checkbox::after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+  position: relative;
+  top: -0.35em;
+  left: 0.2em;
+}
+
+.form-check-input:checked ~ .custom-checkbox::after {
+  display: inline-block;
+}
+
+.form-check-input:not(:checked) ~ .custom-checkbox::after {
+  display: none;
 }
 
 /* TASK ADD */

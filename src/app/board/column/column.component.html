@@ -43,7 +43,7 @@
     <div
       class="task-container d-flex justify-content-center align-items-center"
     >
-      <p
+      <div
         class="p-3 task d-flex justify-content-between align-items-center"
         [ngStyle]="{ background: task.bg, color: task.color }"
         (mouseup)="selectTask()"
@@ -52,12 +52,8 @@
           {{ task.text }}
         </span>
 
-        <input
-          class="task-checkbox form-check-input"
-          type="checkbox"
-          value=""
-        />
-      </p>
+        <input type="checkbox" class="task-checkbox" />
+      </div>
     </div>
   </div>
 </div>
