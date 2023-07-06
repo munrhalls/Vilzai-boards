@@ -38,6 +38,8 @@ export class BoardAddComponent implements OnInit {
         (colTitle, index) =>
           new Column(colTitle, [
             new Task('New task 1...', 'silver', '#000', null),
+            new Task('New task 2...', 'green', '#000', null),
+            new Task('New task 3...', 'blue', '#000', null),
           ])
       ),
     });
