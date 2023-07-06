@@ -18,7 +18,7 @@ import { BoardHeaderComponent } from './board/board-header/board-header.componen
 import { BoardMenuComponent } from './board/board-header/board-menu/board-menu.component';
 import { BoardEditComponent } from './board-edit/board-edit.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { BoardAddComponent } from './board/board-add/board-add.component';
+import { BoardAddComponent } from './board-add/board-add.component';
 import { BoardHeaderEditComponent } from './board-edit/board-header-edit/board-header-edit.component';
 import { ColumnComponent } from './board/column/column.component';
 
