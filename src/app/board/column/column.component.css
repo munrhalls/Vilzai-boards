@@ -130,7 +130,11 @@ header h2 {
   height: 8rem;
 }
 .task-edit-save-and-delete {
+  background-color: #000;
   margin-top: 1rem;
+  padding: 1.75rem 0.5rem;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .task-edit-save-and-delete button {
