@@ -1,11 +1,17 @@
 /* BOARD */
 .board {
   padding: 0 2rem;
+  flex-grow: 1;
 }
 /* COLUMN */
+app-column {
+  flex: 1;
+}
 .columns {
   border: 3px solid #000;
   min-height: 100%;
+  overflow-x: auto;
+  flex-grow: 1;
 }
 
 /* DELETE BOARD */

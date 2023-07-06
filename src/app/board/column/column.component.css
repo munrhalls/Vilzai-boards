@@ -156,3 +156,6 @@ header h2 {
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
+.drag-enabler-for-empty-space {
+  flex: 1;
+}

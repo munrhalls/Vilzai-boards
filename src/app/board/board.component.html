@@ -1,4 +1,4 @@
-<div *ngIf="board !== null" class="container-fluid board">
+<div *ngIf="board !== null" class="container-fluid board d-flex flex-column">
   <app-board-header
     (boardEditModeSet)="onBoardEditModeSet()"
     (boardDeletedPrompt)="onBoardDeletedPrompt()"
@@ -10,13 +10,14 @@
     class="columns pb-3 row flex-xxl-nowrap"
   >
     <div
-      class="column mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg col-xl col-xxl"
+      class="column mt-3 col-12 col-xs-12 col-sm-6 col-md-4 col-lg col-xl col-xxl d-flex flex-column"
       *ngFor="let col of board.columns; let colIndex = index"
     >
       <app-column
         [col]="col"
         (dragStart)="onTaskDragStart($event, colIndex)"
         (dragDrop)="onTaskDrop($event, colIndex)"
+        class="d-flex flex-column"
       ></app-column>
     </div>
   </div>
