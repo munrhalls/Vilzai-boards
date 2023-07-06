@@ -52,7 +52,6 @@ export class ColumnComponent {
   }
   // DRAG & DROP
   onDragStart(task: Task) {
-    console.log('start');
     this.dragStart.emit(task);
   }
   onDragEnter(event: any) {

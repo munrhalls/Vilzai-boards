@@ -133,7 +133,10 @@
 </div>
 
 <div
+  draggable="true"
   *ngIf="col.tasks.length === 0"
+  (dragenter)="onDragEnter($event)"
+  (dragover)="onDragOver($event)"
   (drop)="onDrop($event, 0)"
   style="height: 100%"
 ></div>
