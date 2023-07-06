@@ -166,13 +166,6 @@ export const guestData: Board[] = [
             alottedTime: 30,
           },
           {
-            text: 'Simple, useful, no-nonsense board with task columns!',
-            bg: TaskColorPairs[8].bg,
-            color: TaskColorPairs[8].text,
-            done: false,
-            alottedTime: 30,
-          },
-          {
             text: 'So you can easily add many tasks of that color',
             bg: TaskColorPairs[8].bg,
             color: TaskColorPairs[8].text,
@@ -226,7 +219,13 @@ export const guestData: Board[] = [
             done: false,
             alottedTime: 10,
           },
-
+          {
+            text: 'Simple, useful, no-nonsense board with task columns!',
+            bg: TaskColorPairs[8].bg,
+            color: TaskColorPairs[8].text,
+            done: false,
+            alottedTime: 30,
+          },
           {
             text: 'Glad to have you onboard, enjoy Vilzai boards!',
             bg: TaskColorPairs[8].bg,
