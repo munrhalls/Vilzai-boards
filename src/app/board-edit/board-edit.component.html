@@ -2,7 +2,11 @@
   <div class="row mt-5 justify-content-center">
     <div class="col-10 d-flex justify-content-start align-items-center">
       <button
-        [disabled]="board.title.length > 100 || board.columns.length > 15"
+        [disabled]="
+          board.title.length > 100 ||
+          board.title.length < 1 ||
+          board.columns.length > 15
+        "
         type="submit"
         class="btn btn-dark button-dark btn-lg"
         (click)="handleBoardDisplayModeSet()"
@@ -14,15 +18,23 @@
   </div>
 
   <div
+    *ngIf="board.title.length < 1"
+    class="mt-4 mb-2 alert alert-danger"
+    role="alert"
+  >
+    Board title cannot be empty.
+  </div>
+
+  <div
     *ngIf="board.title.length >= 60"
-    class="mt-2 mb-2 alert alert-danger"
+    class="mt-4 mb-2 alert alert-danger"
     role="alert"
   >
     Board title cannot be longer than 60 characters.
   </div>
   <div
     *ngIf="board.columns.length >= 15"
-    class="mt-2 mb-2 alert alert-danger"
+    class="mt-4 mb-2 alert alert-danger"
     role="alert"
   >
     Board has maximum 16 columns. Please delete columns to keep total count at
