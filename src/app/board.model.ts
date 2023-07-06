@@ -28,8 +28,7 @@ export class TaskColorPair {
 }
 
 export const TaskColorPairs = [
-  { title: 'gray', bg: '#505050;', text: '#fff' },
-  { title: 'darkgray', bg: '#4a4a4a', text: '#fff' },
+  { title: 'gray', bg: '#505050', text: '#fff' },
   { title: 'silver', bg: 'silver', text: '#000' },
   { title: 'blue', bg: '#0101dd', text: '#ccc' },
   { title: 'green', bg: '#008e00', text: '#fff' },
